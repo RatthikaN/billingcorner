@@ -9,11 +9,11 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-slate-900 mb-6">Our Policies</h4>
           <ul className="space-y-4">
-            <li><Link href="/policies/terms" className="text-slate-500 hover:text-primary text-sm transition-colors">Terms & Conditions</Link></li>
-            <li><Link href="/policies/privacy" className="text-slate-500 hover:text-primary text-sm transition-colors">Privacy Policy</Link></li>
-            <li><Link href="/policies/refund" className="text-slate-500 hover:text-primary text-sm transition-colors">Refund / Cancellation Policy</Link></li>
-            <li><Link href="/policies/gdpr" className="text-slate-500 hover:text-primary text-sm transition-colors">GDPR Policy</Link></li>
-            <li><Link href="/policies/cookie" className="text-slate-500 hover:text-primary text-sm transition-colors">Cookie Policy</Link></li>
+            <li><Link href="/terms-conditions" className="text-slate-500 hover:text-primary text-sm transition-colors">Terms & Conditions</Link></li>
+            <li><Link href="/privacy-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/refund-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">Refund / Cancellation Policy</Link></li>
+            <li><Link href="/gdpr-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">GDPR Policy</Link></li>
+            <li><Link href="/cookie-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">Cookie Policy</Link></li>
           </ul>
         </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
             </li>
             <li className="text-slate-500 text-sm">
               <span className="block font-medium text-slate-700 mb-1">Phone</span>
-              <a href="tel:+919876543210" className="hover:text-primary transition-colors">+91 98765 43210</a>
+              <a href="tel:+918300256356" className="hover:text-primary transition-colors">+91 8300 256 356</a>
             </li>
             <li className="text-slate-500 text-sm">
               <span className="block font-medium text-slate-700 mb-1">Email</span>

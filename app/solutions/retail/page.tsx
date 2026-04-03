@@ -44,7 +44,7 @@ export default function RetailSolution() {
         "Real-time data tracking",
         "Secure and reliable systems",
         "Scalable for growing businesses",
-        "24/7 support and maintenance"
+        "24/7 realtime sync"
       ]}
       closingTitle="Empowering Retail Growth"
       closingDescription="We help retailers stay ahead in a competitive market by combining technology with simplicity. Our solutions are designed to improve efficiency, reduce operational costs, and enhance customer satisfaction. Whether you run a local store or a supermarket chain, we provide the tools you need to succeed in the modern retail landscape."

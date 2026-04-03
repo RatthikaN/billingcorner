@@ -64,57 +64,35 @@ Simplify GST billing, manage inventory, and track your business performance in r
               </div>
             </div>
 
-            {/* ── Right — Two Floating Phone Mockups ── */}
+            {/* ── Right — Floating Customer Image ── */}
             <div className="w-full md:w-[45%] flex items-center justify-center relative min-h-[420px]">
 
-              {/* Glow behind phones */}
+              {/* Glow behind image */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="w-48 h-48 bg-white/20 rounded-full blur-[70px]" />
               </div>
 
-              {/* Phone 1 — back, rotated left, slightly higher */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0 }}
-                className="absolute left-[5%] md:left-[2%] top-[4%] z-10"
-                style={{ transform: 'rotate(-8deg)' }}
-              >
-                <div
-                  className="rounded-[2rem] overflow-hidden shadow-[0_30px_80px_-10px_rgba(0,0,0,0.45)]"
-                  style={{ width: '195px', border: '3px solid rgba(255,255,255,0.15)' }}
-                >
-                  <img
-                    src="/images/app-screen-1.png"
-                    alt="App screen showing Add New Customer form — empty"
-                    className="w-full h-auto block"
-                    draggable={false}
-                  />
-                </div>
-              </motion.div>
-
-              {/* Phone 2 — front, rotated right, slightly lower */}
               <motion.div
                 animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-                className="absolute right-[5%] md:right-[6%] bottom-[4%] z-20"
-                style={{ transform: 'rotate(6deg)' }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+                className="relative z-20 flex justify-center w-full"
               >
                 <div
-                  className="rounded-[2rem] overflow-hidden shadow-[0_30px_80px_-10px_rgba(0,0,0,0.55)]"
-                  style={{ width: '215px', border: '3px solid rgba(255,255,255,0.2)' }}
+                  className="rounded-[1rem] overflow-hidden shadow-[0_30px_80px_-10px_rgba(0,0,0,0.55)] w-[85%] md:w-[90%]"
+                  style={{ border: '3px solid rgba(255,255,255,0.2)' }}
                 >
                   <img
-                    src="/images/app-screen-2.png"
-                    alt="App screen showing Add New Customer form — filled in"
+                    src="/images/customer.png"
+                    alt="Customer Management App Interface"
                     className="w-full h-auto block"
                     draggable={false}
                   />
                 </div>
-
-                {/* Small badge on the front phone */}
-                <div className="absolute -top-3 -left-4 bg-white rounded-xl px-2.5 py-1 shadow-lg flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse inline-block" />
-                  <span className="text-[10px] font-bold text-slate-700 whitespace-nowrap">Customer Saved!</span>
+                
+                {/* Small badge on the interface */}
+                <div className="absolute top-[-10px] left-[-10px] sm:left-4 z-30 bg-white rounded-xl px-3 py-1.5 shadow-xl flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse inline-block" />
+                  <span className="text-xs font-bold text-slate-700 whitespace-nowrap">Customer Saved!</span>
                 </div>
               </motion.div>
 

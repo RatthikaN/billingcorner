@@ -127,7 +127,7 @@ export default function Home() {
         HERO SECTION
         ======================================================================
       */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-8 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-8 overflow-hidden bg-slate-100">
 
         {/* Parallax background orbs */}
         <motion.div style={{ y: y2 }} className="absolute pointer-events-none inset-0 z-0">
@@ -256,27 +256,27 @@ export default function Home() {
         </div>
       </section>
 
-
+  <StatsShowcase />
 
       {/* Instant GST Billing Section */}
-      <section className="py-24 px-6 bg-white relative z-10 overflow-hidden">
+      <section className="pt-24 pb-8 px-6 bg-white relative z-10 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Centered Heading */}
           <div className="text-center mb-16 md:mb-20 max-w-4xl mx-auto">
             <span className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Fast & Efficient</span>
             <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-[1.1] tracking-tighter">
-              Create instant <span className="text-primary italic">GST Billing</span> online and share your customers
+              Create instant <span className="text-primary italic">GST Billing</span> online and <br/> share your customers
             </h2>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
             {/* Left — Description */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="w-full md:w-[45%] shrink-0"
+              className="w-full md:w-[40%] shrink-0"
             >
               <p className="text-slate-600 text-base md:text-lg leading-relaxed font-light mb-8">
                 Create GST bills instantly with a fast and easy online billing system. Generate accurate invoices and share them with your customers via WhatsApp, email, or download in seconds. Manage your business smarter, anytime and anywhere.
@@ -288,45 +288,44 @@ export default function Home() {
             </motion.div>
 
           {/* Right — Image with Cinematic Parallax */}
-          <div className="w-full md:w-[55%] relative perspective-1000">
+          <div className="w-full md:w-[60%] relative perspective-1000 mt-8 md:mt-0">
             {/* Background blur aura */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
             
             <motion.div
               style={{ y: y1 }}
-              className="relative z-10"
+              className="relative z-10 px-4 md:px-0"
             >
               <img
-                src="/images/bg-remove-gst-instant.png"
+                src="/instant.png"
                 alt="Instant GST Billing interface"
-                className="w-full h-auto object-contain drop-shadow-2xl translate-z-10"
+                className="w-full h-auto object-contain drop-shadow-2xl translate-z-10 filter scale-110 md:scale-[1.15]"
               />
 
               {/* Parallax elements — These move at different speeds than the main image */}
               {/* WhatsApp Icon overlay / float */}
-              <motion.div
+              {/* <motion.div
                 style={{ y: y2, x: 10 }}
                 className="absolute top-[15%] left-[-5%] z-20 w-16 h-16 md:w-20 md:h-20 bg-emerald-500 rounded-2xl shadow-xl flex items-center justify-center text-white drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]"
               >
                 <div className="font-bold text-xs uppercase">WA</div>
-                {/* Or use a WhatsApp-like icon if I had one, but using a colored block is clean */}
-              </motion.div>
+]              </motion.div> */}
 
               {/* Envelope float */}
-              <motion.div
+              {/* <motion.div
                 style={{ y: y3, x: -10 }}
                 className="absolute top-[5%] right-[15%] z-20 p-4 bg-white rounded-2xl shadow-2xl border border-slate-100 flex items-center justify-center text-slate-800 drop-shadow-[0_0_25px_rgba(0,0,0,0.1)]"
               >
                 <Sparkles size={24} className="text-primary animate-pulse" />
-              </motion.div>
+              </motion.div> */}
 
               {/* Download float */}
-              <motion.div
+              {/* <motion.div
                 style={{ y: y2, x: -15 }}
                 className="absolute bottom-[20%] right-[-5%] z-20 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center drop-shadow-[0_0_20px_rgba(99,102,241,0.4)]"
               >
                 <ArrowRight size={24} className="rotate-90" />
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Subtle panning shadow background */}
@@ -339,10 +338,10 @@ export default function Home() {
       </div>
     </section>
 
-      <StatsShowcase />
+      {/* <StatsShowcase /> */}
 
       {/* Multi-User Access Animation Section */}
-      {/* <MultiUserAccessAnimation /> */}
+      <MultiUserAccessAnimation />
 
       {/* Core Values Section — Infinite Horizontal Scroll */}
       <CoreValuesMarquee />
@@ -352,7 +351,7 @@ export default function Home() {
       <IntelligentCore />
 
 
-      <ReceiptVideoAnimation />
+      {/* <ReceiptVideoAnimation /> */}
       <ComplianceFeatures />
       <ProductServiceManagement />
       <SmartRackInventory />

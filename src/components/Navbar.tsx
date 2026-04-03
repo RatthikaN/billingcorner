@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LayoutGrid, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -42,11 +43,16 @@ export default function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
-            <LayoutGrid size={24} />
+        <Link href="/" className="flex items-center group">
+          <div className="relative w-40 h-10 sm:w-48 sm:h-12 group-hover:scale-105 transition-transform">
+            <Image 
+              src="/images/billing_logo-removebg-preview.png" 
+              alt="Billing Corner Logo" 
+              fill 
+              className="object-contain object-left" 
+              priority 
+            />
           </div>
-          <span className="text-xl font-bold tracking-tight text-slate-900">Billing Corner</span>
         </Link>
 
         {/* Desktop Nav */}

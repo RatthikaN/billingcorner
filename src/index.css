@@ -75,6 +75,19 @@
   animation-delay: var(--delay, 0s);
 }
 
+@keyframes whatsapp-jump {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+.animate-whatsapp-jump {
+  animation: whatsapp-jump 2s ease-in-out infinite;
+}
+
 /* Hide scrollbar but keep scroll functionality */
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE/Edge */

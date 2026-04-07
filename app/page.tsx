@@ -151,7 +151,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              AI-Powered Efficiency
+              AI-Powered Billing Software
             </motion.div>
 
             {/* Heading */}
@@ -161,8 +161,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="text-4xl md:text-5xl xl:text-6xl font-semibold text-slate-900 mb-6 leading-[1.1] tracking-tighter"
             >
-              India's <span className="text-primary">#1</span> AI Powered 
-              <span className="text-primary italic">GST billing software</span>
+              India's <span className="text-primary">#1</span> AI Powered
+              <span className="text-primary italic">GST Billing Software</span>
             </motion.h1>
 
             {/* Tagline & Description */}
@@ -174,7 +174,7 @@ export default function Home() {
             >
               <h2 className="text-xl md:text-2xl font-medium text-slate-900 mb-3 tracking-tight">Built for every businesses</h2>
               <p className="text-base md:text-lg text-slate-600 leading-relaxed font-light">
-                A modern and easy-to-use online GST billing software to take your business to the next level. Access it anytime, anywhere.
+                A modern and easy-to-use online GST Billing Software to take your business to the next level. Access it anytime, anywhere.
               </p>
             </motion.div>
 
@@ -256,16 +256,27 @@ export default function Home() {
         </div>
       </section>
 
-  <StatsShowcase />
+      <StatsShowcase />
 
       {/* Instant GST Billing Section */}
       <section className="pt-24 pb-8 px-6 bg-white relative z-10 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Centered Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            Fast & Easy Access
+          </motion.div>
           <div className="text-center mb-16 md:mb-20 max-w-4xl mx-auto">
-            <span className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Fast & Efficient</span>
             <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-[1.1] tracking-tighter">
-              Create instant <span className="text-primary italic">GST Billing</span> online and <br/> share your customers
+              Create instant <span className="text-primary italic">GST Billing</span> online and <br /> share your customers
             </h2>
           </div>
 
@@ -287,56 +298,56 @@ export default function Home() {
               </Link>
             </motion.div>
 
-          {/* Right — Image with Cinematic Parallax */}
-          <div className="w-full md:w-[60%] relative perspective-1000 mt-8 md:mt-0">
-            {/* Background blur aura */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
-            
-            <motion.div
-              style={{ y: y1 }}
-              className="relative z-10 px-4 md:px-0"
-            >
-              <img
-                src="/instant.png"
-                alt="Instant GST Billing interface"
-                className="w-full h-auto object-contain drop-shadow-2xl translate-z-10 filter scale-110 md:scale-[1.15]"
-              />
+            {/* Right — Image with Cinematic Parallax */}
+            <div className="w-full md:w-[60%] relative perspective-1000 mt-8 md:mt-0">
+              {/* Background blur aura */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
-              {/* Parallax elements — These move at different speeds than the main image */}
-              {/* WhatsApp Icon overlay / float */}
-              {/* <motion.div
+              <motion.div
+                style={{ y: y1 }}
+                className="relative z-10 px-4 md:px-0"
+              >
+                <img
+                  src="/instant.png"
+                  alt="Instant GST Billing interface"
+                  className="w-full h-auto object-contain drop-shadow-2xl translate-z-10 filter scale-110 md:scale-[1.15]"
+                />
+
+                {/* Parallax elements — These move at different speeds than the main image */}
+                {/* WhatsApp Icon overlay / float */}
+                {/* <motion.div
                 style={{ y: y2, x: 10 }}
                 className="absolute top-[15%] left-[-5%] z-20 w-16 h-16 md:w-20 md:h-20 bg-emerald-500 rounded-2xl shadow-xl flex items-center justify-center text-white drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]"
               >
                 <div className="font-bold text-xs uppercase">WA</div>
 ]              </motion.div> */}
 
-              {/* Envelope float */}
-              {/* <motion.div
+                {/* Envelope float */}
+                {/* <motion.div
                 style={{ y: y3, x: -10 }}
                 className="absolute top-[5%] right-[15%] z-20 p-4 bg-white rounded-2xl shadow-2xl border border-slate-100 flex items-center justify-center text-slate-800 drop-shadow-[0_0_25px_rgba(0,0,0,0.1)]"
               >
                 <Sparkles size={24} className="text-primary animate-pulse" />
               </motion.div> */}
 
-              {/* Download float */}
-              {/* <motion.div
+                {/* Download float */}
+                {/* <motion.div
                 style={{ y: y2, x: -15 }}
                 className="absolute bottom-[20%] right-[-5%] z-20 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center drop-shadow-[0_0_20px_rgba(99,102,241,0.4)]"
               >
                 <ArrowRight size={24} className="rotate-90" />
               </motion.div> */}
-            </motion.div>
+              </motion.div>
 
-            {/* Subtle panning shadow background */}
-            <motion.div 
-               style={{ x: y1, opacity: 0.1 }}
-               className="absolute inset-0 bg-slate-900/10 blur-[50px] rounded-full -z-10"
-            />
+              {/* Subtle panning shadow background */}
+              <motion.div
+                style={{ x: y1, opacity: 0.1 }}
+                className="absolute inset-0 bg-slate-900/10 blur-[50px] rounded-full -z-10"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* <StatsShowcase /> */}
 
@@ -392,7 +403,7 @@ export default function Home() {
               </h2>
               
               <p className="text-slate-400 text-xl mb-12 max-w-lg leading-relaxed font-light">
-                Join 500+ forward-thinking merchants who have automated their compliance and doubled their efficiency.
+                Join 100+ forward-thinking merchants who have automated their compliance and doubled their efficiency.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">

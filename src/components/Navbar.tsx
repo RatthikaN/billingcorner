@@ -44,13 +44,13 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center group">
-          <div className="relative w-40 h-10 sm:w-48 sm:h-12 group-hover:scale-105 transition-transform">
-            <Image 
-              src="/images/billing_logo-removebg-preview.png" 
-              alt="Billing Corner Logo" 
-              fill 
-              className="object-contain object-left" 
-              priority 
+          <div className="relative w-64 h-20 sm:w-80 sm:h-24 group-hover:scale-105 transition-transform">
+            <Image
+              src="/images/billing_logo-removebg-preview.png"
+              alt="Billing Corner Logo"
+              fill
+              className="object-contain object-left"
+              priority
             />
           </div>
         </Link>

@@ -5,13 +5,19 @@ import { Monitor, Globe, Smartphone, Cpu, Sparkles, Layers } from 'lucide-react'
 
 export default function IntelligentCore() {
   return (
-    <section className="py-24 px-6 relative z-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 px-0 relative z-10 overflow-hidden bg-gradient-to-br from-[#1a0b2e] via-[#3b0764] to-[#1e1b4b]">
+      {/* Background Decorative Elements with Parallax feels */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10 px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-[3rem] bg-gradient-to-br from-[#1a0b2e] via-[#3b0764] to-[#1e1b4b] p-10 md:p-16 overflow-hidden shadow-2xl min-h-[600px] border border-white/10"
+          className="relative rounded-[3rem] bg-white/5 backdrop-blur-sm p-10 md:p-16 overflow-hidden shadow-2xl min-h-[600px] border border-white/10"
         >
           {/* Abstract Circular Shapes & Depth Gradients */}
           <div className="absolute inset-0 pointer-events-none opacity-40">
@@ -23,7 +29,7 @@ export default function IntelligentCore() {
           </div>
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center h-full gap-12 lg:gap-8">
-            
+
             {/* Left Content */}
             <div className="w-full lg:w-[45%] text-left mt-8 lg:mt-0 lg:pr-8">
               <motion.div
@@ -35,8 +41,8 @@ export default function IntelligentCore() {
                 <Sparkles size={14} className="text-fuchsia-400" />
                 Cross-Platform Synergy
               </motion.div>
-              
-              <motion.h2 
+
+              <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -47,7 +53,7 @@ export default function IntelligentCore() {
                   With Multi-Platform Power
                 </span>
               </motion.h2>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -60,52 +66,52 @@ export default function IntelligentCore() {
 
             {/* Right Side — Futuristic Network Diagram */}
             <div className="w-full lg:w-[55%] relative h-[500px] flex items-center justify-center">
-              
+
               {/* Connecting SVG Curves with Flowing Animation */}
-              <svg 
-                className="absolute inset-0 w-full h-full pointer-events-none drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]" 
+              <svg
+                className="absolute inset-0 w-full h-full pointer-events-none drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
                 viewBox="0 0 500 500"
                 preserveAspectRatio="xMidYMid meet"
               >
                 {/* Center to Top */}
-                <motion.path 
-                  d="M 250,250 C 220,150 280,150 250,50" 
-                  fill="none" 
-                  stroke="url(#gradientLine)" 
-                  strokeWidth="2" 
+                <motion.path
+                  d="M 250,250 C 220,150 280,150 250,50"
+                  fill="none"
+                  stroke="url(#gradientLine)"
+                  strokeWidth="2"
                   strokeLinecap="round"
                 />
                 {/* Center to Left */}
-                <motion.path 
-                  d="M 250,250 C 150,220 150,280 50,250" 
-                  fill="none" 
-                  stroke="url(#gradientLine)" 
+                <motion.path
+                  d="M 250,250 C 150,220 150,280 50,250"
+                  fill="none"
+                  stroke="url(#gradientLine)"
                   strokeWidth="2"
                   strokeLinecap="round"
                 />
                 {/* Center to Right */}
-                <motion.path 
-                  d="M 250,250 C 350,280 350,220 450,250" 
-                  fill="none" 
-                  stroke="url(#gradientLine)" 
+                <motion.path
+                  d="M 250,250 C 350,280 350,220 450,250"
+                  fill="none"
+                  stroke="url(#gradientLine)"
                   strokeWidth="2"
                   strokeLinecap="round"
                 />
 
                 {/* Animated Flow Lines (Energy pulses) */}
-                <motion.path 
+                <motion.path
                   d="M 250,250 C 220,150 280,150 250,50" fill="none" stroke="#e879f9" strokeWidth="3"
                   strokeDasharray="10 100" strokeLinecap="round"
                   animate={{ strokeDashoffset: [110, 0] }}
                   transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
                 />
-                <motion.path 
+                <motion.path
                   d="M 250,250 C 150,220 150,280 50,250" fill="none" stroke="#e879f9" strokeWidth="3"
                   strokeDasharray="10 100" strokeLinecap="round"
                   animate={{ strokeDashoffset: [110, 0] }}
                   transition={{ repeat: Infinity, duration: 2, ease: "linear", delay: 0.5 }}
                 />
-                <motion.path 
+                <motion.path
                   d="M 250,250 C 350,280 350,220 450,250" fill="none" stroke="#e879f9" strokeWidth="3"
                   strokeDasharray="10 100" strokeLinecap="round"
                   animate={{ strokeDashoffset: [110, 0] }}

@@ -7,8 +7,8 @@ import FAQ from '@/src/components/FAQ';
 
 const pricingFaqs = [
   {
-    question: "Is the Basic plan really just ₹1?",
-    answer: "Yes! You get full access to the basic features for 14 days for just ₹1 so you can see if the platform is right for you."
+    question: "Can I try the Basic plan before upgrading?",
+    answer: "Yes! Plan A (Basic) at ₹499/year gives you full access to core features so you can see if the platform is right for you before upgrading to Pro."
   },
   {
     question: "How do I upgrade to the Pro plan?",
@@ -27,8 +27,8 @@ const pricingFaqs = [
 const plans = [
   {
     name: 'Plan A (Basic)',
-    price: '1',
-    period: 'for 14 days',
+    price: '499',
+    period: 'per year',
     desc: 'Perfect for getting started.',
     features: [
       { text: 'Basic Invoicing', included: true },
@@ -44,7 +44,7 @@ const plans = [
   },
   {
     name: 'Plan B (Pro)',
-    price: '499',
+    price: '1,499',
     period: 'per year',
     desc: 'Best for growing businesses.',
     features: [
@@ -122,7 +122,7 @@ export default function Pricing() {
         </div>
 
         {/* Razorpay Secure Payment Note */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}

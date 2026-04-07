@@ -45,10 +45,10 @@ export default function Contact() {
                 <h4 className="font-bold text-slate-900 mb-1">Email Us</h4>
                 <div className="space-y-1">
                   <p className="text-slate-500 text-sm">
-                    <span className="font-medium text-slate-700">Sales Enquiry:</span> sales@billingcorner.in
+                    <span className="font-medium text-slate-700">Sales Enquiry:</span> <a href="mailto:sales@billingcorner.com" className="hover:text-primary transition-colors">sales@billingcorner.com</a>
                   </p>
                   <p className="text-slate-500 text-sm">
-                    <span className="font-medium text-slate-700">Technical Support:</span> support@billingcorner.in
+                    <span className="font-medium text-slate-700">Technical Support:</span> <a href="mailto:support@billingcorner.com" className="hover:text-primary transition-colors">support@billingcorner.com</a>
                   </p>
                 </div>
               </div>
@@ -61,10 +61,10 @@ export default function Contact() {
                 <h4 className="font-bold text-slate-900 mb-1">Call Us</h4>
                 <div className="space-y-1">
                   <p className="text-slate-500 text-sm">
-                    <span className="font-medium text-slate-700">Phone:</span> +91 XXXXX XXXXX
+                    <span className="font-medium text-slate-700">Phone:</span> <a href="tel:+918300256356" className="hover:text-primary transition-colors">+91 8300 256 356</a>
                   </p>
                   <p className="text-slate-500 text-sm">
-                    <span className="font-medium text-slate-700">WhatsApp:</span> +91 XXXXX XXXXX
+                    <span className="font-medium text-slate-700">WhatsApp:</span> <a href="https://wa.me/918300256356" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+91 8300 256 356</a>
                   </p>
                 </div>
               </div>

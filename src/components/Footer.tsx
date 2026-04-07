@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-8 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
-        
+
         <div>
           <h4 className="font-bold text-slate-900 mb-6">Our Policies</h4>
           <ul className="space-y-4">
@@ -35,7 +35,7 @@ export default function Footer() {
             <li><Link href="/products/desktop" className="text-slate-500 hover:text-primary text-sm transition-colors">Desktop Billing (Windows)</Link></li>
             <li><Link href="/products/mobile" className="text-slate-500 hover:text-primary text-sm transition-colors">Mobile App (iOS/Android)</Link></li>
             <li><Link href="/products/cloud" className="text-slate-500 hover:text-primary text-sm transition-colors">Cloud Dashboard</Link></li>
-            <li><Link href="/products/ecommerce" className="text-slate-500 hover:text-primary text-sm transition-colors">E-commerce Integration</Link></li>
+            {/* <li><Link href="/products/ecommerce" className="text-slate-500 hover:text-primary text-sm transition-colors">E-commerce Integration</Link></li> */}
             <li><Link href="/products/inventory" className="text-slate-500 hover:text-primary text-sm transition-colors">Advanced Inventory Management</Link></li>
           </ul>
         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="text-slate-500 text-sm">
               <span className="block font-medium text-slate-700 mb-1">Address</span>
-              123 Tech Square, Phase 1<br />New Delhi, India 110001
+              1st Floor, Illathu Pillaimar Building, Gandhi Statue, RJPM Avarampatti, Rajapalayam, Tamil Nadu 626117
             </li>
             <li className="text-slate-500 text-sm">
               <span className="block font-medium text-slate-700 mb-1">Phone</span>
@@ -53,7 +53,7 @@ export default function Footer() {
             </li>
             <li className="text-slate-500 text-sm">
               <span className="block font-medium text-slate-700 mb-1">Email</span>
-              <a href="mailto:support@billingcorner.com" className="hover:text-primary transition-colors">support@billingcorner.com</a>
+              <a href="mailto:contact@billingcorner.com" className="hover:text-primary transition-colors">contact@billingcorner.com</a>
             </li>
           </ul>
         </div>
@@ -61,12 +61,13 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-slate-400 text-xs text-center md:text-left">
-          © {new Date().getFullYear()} Billing Corner India. All rights reserved. Microsoft and Windows are trademarks of the Microsoft group of companies.
+          © {new Date().getFullYear()} Billing Corner. All rights reserved. Powered by <a href="https://www.codingrim.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">CODINGRIM</a>.
         </p>
         <div className="flex gap-6">
-          <a href="#" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Twitter</a>
-          <a href="#" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">LinkedIn</a>
-          <a href="#" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">GitHub</a>
+          <a href="https://www.instagram.com/billingcorner/" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Instagram</a>
+          <a href="https://www.linkedin.com/company/112598320/admin/dashboard/" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Linkedin</a>
+          <a href="https://www.facebook.com/profile.php?id=61573243436271" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Facebook</a>
+          <a href="https://www.youtube.com/@Billingcorner" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Youtube</a>
         </div>
       </div>
     </footer>

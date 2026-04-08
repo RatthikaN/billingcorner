@@ -116,7 +116,7 @@ function ParallaxImages({ baseVelocity = 100 }: MarqueeProps) {
             {images.map((image, index) => (
               <Link
                 key={`${i}-${index}`}
-                href={`/features#${image.id}`}
+                href={`/features/${image.id}`}
                 className="block"
                 draggable={false}
               >

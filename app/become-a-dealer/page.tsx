@@ -133,7 +133,7 @@ export default function BecomeDealer() {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
-            <Link href="#join" className="group relative px-10 py-5 bg-slate-900 text-white font-bold rounded-2xl overflow-hidden shadow-2xl transition-all hover:scale-105 active:scale-95">
+            <Link href="/become-a-dealer/join" className="group relative px-10 py-5 bg-slate-900 text-white font-bold rounded-2xl overflow-hidden shadow-2xl transition-all hover:scale-105 active:scale-95">
               <span className="relative z-10 flex items-center gap-3 text-lg">
                 Join Billing Corner Today
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

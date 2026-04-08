@@ -1,8 +1,11 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Monitor, Globe, Smartphone, Apple, Play, Download as DownloadIcon, ChevronRight } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import FAQ from '@/src/components/FAQ';
+
+const platforms = ['Desktop', 'Mobile', 'Web'];
 
 const downloadFaqs = [
   {
@@ -20,15 +23,38 @@ const downloadFaqs = [
 ];
 
 export default function Download() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % platforms.length);
+    }, 2500);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="pb-24">
-      <section className="pt-32 pb-24 px-6 text-center">
+      <section className="pt-32 pb-20 px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8">
-            Download <span className="text-primary">Billing Corner</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 flex flex-col sm:flex-row items-center whitespace-nowrap justify-center gap-x-4 gap-y-2">
+            <span>Download Billing Corner for</span>
+            <div className="relative h-[1.2em] min-w-[120px] flex items-center justify-center sm:justify-start">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={platforms[index]}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="text-primary block"
+                >
+                  {platforms[index]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
           </h1>
-          <p className="text-slate-600 text-xl">
-            Take control of your finances on any device. Experience seamless synchronization between your desktop, web browser, and mobile devices.
+          <p className="text-slate-600 text-xl max-w-2xl mx-auto">
+            Experience absolute synchronization. Take control of your business finances on every device you own.
           </p>
         </div>
       </section>

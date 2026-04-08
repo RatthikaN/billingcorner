@@ -96,3 +96,17 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;             /* Chrome, Safari, Opera */
 }
+
+/* Base Prose Styles for Policies */
+.prose h2 {
+  @apply text-2xl font-bold text-slate-800 mt-10 mb-4;
+}
+.prose p {
+  @apply text-slate-600 mb-4 leading-relaxed;
+}
+.prose ul {
+  @apply list-disc ml-6 mb-6 space-y-2 text-slate-600;
+}
+.prose strong {
+  @apply font-semibold text-slate-900;
+}

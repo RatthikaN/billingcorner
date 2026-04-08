@@ -24,14 +24,13 @@ import MultiUserAccessAnimation from '@/components/MultiUserAccessAnimation';
 import TestimonialMarquee from '@/components/TestimonialMarquee';
 import SaaSBanner from '@/components/SaaSBanner';
 import CTABanner from '@/components/CTABanner';
-import ComplianceFeatures from '@/components/ComplianceFeatures';
 import ProductServiceManagement from '@/components/ProductServiceManagement';
 import SmartRackInventory from '@/components/SmartRackInventory';
 import GstBillingSimple from '@/components/GstBillingSimple';
 import MonitorClientDues from '@/components/MonitorClientDues';
 import ProfitabilityInsights from '@/components/ProfitabilityInsights';
 import IntelligentCore from '@/components/IntelligentCore';
-
+import ComplianceFeatures from '@/components/ComplianceFeatures';
 import FAQ from '@/src/components/FAQ';
 import ReceiptVideoAnimation from '@/components/ReceiptVideoAnimation';
 import StatsShowcase from '@/components/StatsShowcase';
@@ -131,8 +130,8 @@ export default function Home() {
 
         {/* Parallax background orbs */}
         <motion.div style={{ y: y2 }} className="absolute pointer-events-none inset-0 z-0">
-          <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]" />
-          <div className="absolute -bottom-20 right-10 w-[400px] h-[400px] bg-indigo-400/10 rounded-full blur-[100px]" />
+          <div className="absolute top-10 left-[10%] md:left-1/3 w-64 h-64 md:w-[500px] md:h-[500px] bg-primary/10 rounded-full blur-[80px] md:blur-[120px]" />
+          <div className="absolute -bottom-10 right-0 md:-bottom-20 md:right-10 w-64 h-64 md:w-[400px] md:h-[400px] bg-indigo-400/10 rounded-full blur-[70px] md:blur-[100px]" />
         </motion.div>
 
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20 relative z-10">
@@ -260,13 +259,13 @@ export default function Home() {
 
       {/* Instant GST Billing Section */}
       <section className="pt-24 pb-8 px-6 bg-white relative z-10 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto text-center">
           {/* Centered Heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10 "
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -362,19 +361,19 @@ export default function Home() {
       <IntelligentCore />
 
 
-      {/* <ReceiptVideoAnimation /> */}
       <ComplianceFeatures />
       <ProductServiceManagement />
       <SmartRackInventory />
       <GstBillingSimple />
       <MonitorClientDues />
       <ProfitabilityInsights />
-      <FAQ limit={7} showViewAll={true} />
+      <TestimonialMarquee />
 
 
       <SaaSBanner />
+       <FAQ limit={7} showViewAll={true} />
       <CTABanner />
-      <TestimonialMarquee />
+      {/* <TestimonialMarquee /> */}
 
       {/* Nexus CTA Section — Unique Parallax Experience */}
       {/* <section className="py-32 px-6 bg-[#0f172a] relative z-10 overflow-hidden border-t border-slate-800">

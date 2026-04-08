@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: 'Billing Corner | Smart Billing Software for Modern Businesses',
   description: 'A comprehensive billing, inventory management, and GST compliance software for Indian merchants.',
   icons: {
-    icon: '/images/b_logo.jpeg',
-    apple: '/images/b_logo.jpeg',
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 };
 
@@ -27,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${inter.variable} ${outfit.variable} font-sans text-slate-900 bg-white min-h-screen flex flex-col`}>
+        
+        {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -37,11 +39,12 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
-      </head>
-      <body className={`${inter.variable} ${outfit.variable} font-sans text-slate-900 bg-white min-h-screen flex flex-col`}>
+
         <Navbar />
         <main className="flex-grow">
           {children}

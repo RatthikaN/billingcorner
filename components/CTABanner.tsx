@@ -24,8 +24,8 @@ export default function CTABanner() {
           <div className="relative bg-white/70 backdrop-blur-3xl rounded-[2.5rem] p-10 md:p-14 border border-white/80 overflow-hidden flex flex-col items-center text-center">
             
             {/* Ambient inner glows */}
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-indigo-400/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
+            <div className="absolute top-0 right-0 w-64 h-64 md:w-[400px] md:h-[400px] bg-indigo-400/10 rounded-full blur-[70px] md:blur-[100px] pointer-events-none mix-blend-multiply" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 md:w-[400px] md:h-[400px] bg-primary/10 rounded-full blur-[70px] md:blur-[100px] pointer-events-none mix-blend-multiply" />
 
             {/* Icon / Mini Badge */}
             <motion.div 

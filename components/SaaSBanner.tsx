@@ -28,8 +28,8 @@ export default function SaaSBanner() {
           />
 
           {/* Soft glow orbs */}
-          <div className="absolute -top-16 -left-16 w-72 h-72 bg-blue-400/30 rounded-full blur-[80px] pointer-events-none" />
-          <div className="absolute -bottom-20 right-10 w-80 h-80 bg-purple-500/30 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute -top-16 -left-16 w-48 h-48 md:w-72 md:h-72 bg-blue-400/30 rounded-full blur-[60px] md:blur-[80px] pointer-events-none" />
+          <div className="absolute -bottom-20 right-10 w-56 h-56 md:w-80 md:h-80 bg-purple-500/30 rounded-full blur-[70px] md:blur-[100px] pointer-events-none" />
 
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-0 px-10 md:px-16 py-12 md:py-14">
 
@@ -65,7 +65,7 @@ Simplify GST billing, manage inventory, and track your business performance in r
             </div>
 
             {/* ── Right — Floating Customer Image ── */}
-            <div className="w-full md:w-[45%] flex items-center justify-center relative min-h-[420px]">
+            <div className="w-full md:w-[45%] flex items-center justify-center relative min-h-[350px] md:min-h-[420px]">
 
               {/* Glow behind image */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

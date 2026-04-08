@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-slate-900 mb-6">Our Policies</h4>
           <ul className="space-y-4">
-            <li><Link href="/terms-conditions" className="text-slate-500 hover:text-primary text-sm transition-colors">Terms & Conditions</Link></li>
+            <li><Link href="/terms-and-conditions" className="text-slate-500 hover:text-primary text-sm transition-colors">Terms & Conditions</Link></li>
             <li><Link href="/privacy-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">Privacy Policy</Link></li>
             <li><Link href="/refund-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">Refund / Cancellation Policy</Link></li>
             <li><Link href="/gdpr-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">GDPR Policy</Link></li>
@@ -20,23 +20,25 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-slate-900 mb-6">Industry Solutions</h4>
           <ul className="space-y-4">
-            <li><Link href="/solutions/retail" className="text-slate-500 hover:text-primary text-sm transition-colors">Retail & Supermarkets</Link></li>
-            <li><Link href="/solutions/electronics" className="text-slate-500 hover:text-primary text-sm transition-colors">Electronics & Mobile Shops</Link></li>
-            <li><Link href="/solutions/apparel" className="text-slate-500 hover:text-primary text-sm transition-colors">Clothing & Apparel</Link></li>
-            <li><Link href="/solutions/pharmacy" className="text-slate-500 hover:text-primary text-sm transition-colors">Pharmacy & Healthcare</Link></li>
-            <li><Link href="/solutions/restaurants" className="text-slate-500 hover:text-primary text-sm transition-colors">Restaurants & Cafes</Link></li>
-            <li><Link href="/solutions/fresh-produce" className="text-slate-500 hover:text-primary text-sm transition-colors">Fresh Produce Stores</Link></li>
+            <li><Link href="/retail-and-supermarkets" className="text-slate-500 hover:text-primary text-sm transition-colors">Retail & Supermarkets</Link></li>
+            <li><Link href="/electronics-and-mobile-shops" className="text-slate-500 hover:text-primary text-sm transition-colors">Electronics & Mobile Shops</Link></li>
+            <li><Link href="/clothing-and-apparel" className="text-slate-500 hover:text-primary text-sm transition-colors">Clothing & Apparel</Link></li>
+            <li><Link href="/pharmacy-and-healthcare" className="text-slate-500 hover:text-primary text-sm transition-colors">Pharmacy & Healthcare</Link></li>
+            <li><Link href="/restaurants-and-cafes" className="text-slate-500 hover:text-primary text-sm transition-colors">Restaurants & Cafes</Link></li>
+            <li><Link href="/fresh-produce-stores" className="text-slate-500 hover:text-primary text-sm transition-colors">Fresh Produce Stores</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-bold text-slate-900 mb-6">Platform Applications</h4>
+          <h4 className="font-bold text-slate-900 mb-6">Our Platform & Opportunities</h4>
           <ul className="space-y-4">
-            <li><Link href="/products/desktop" className="text-slate-500 hover:text-primary text-sm transition-colors">Desktop Billing (Windows)</Link></li>
-            <li><Link href="/products/mobile" className="text-slate-500 hover:text-primary text-sm transition-colors">Mobile App (iOS/Android)</Link></li>
-            <li><Link href="/products/cloud" className="text-slate-500 hover:text-primary text-sm transition-colors">Cloud Dashboard</Link></li>
+            <li><Link href="/desktop-billing" className="text-slate-500 hover:text-primary text-sm transition-colors">Desktop Billing Software</Link></li>
+            <li><Link href="/mobile-app" className="text-slate-500 hover:text-primary text-sm transition-colors">Mobile App </Link></li>
+            <li><Link href="/cloud-dashboard" className="text-slate-500 hover:text-primary text-sm transition-colors">Cloud Dashboard</Link></li>
+            <li><Link href="/become-a-dealer" className="text-slate-500 hover:text-primary text-sm transition-colors">Become a Dealer</Link></li>
+
             {/* <li><Link href="/products/ecommerce" className="text-slate-500 hover:text-primary text-sm transition-colors">E-commerce Integration</Link></li> */}
-            <li><Link href="/products/inventory" className="text-slate-500 hover:text-primary text-sm transition-colors">Advanced Inventory Management</Link></li>
+            {/* <li><Link href="/advanced-inventory-management" className="text-slate-500 hover:text-primary text-sm transition-colors">Advanced Inventory Management</Link></li> */}
           </ul>
         </div>
 
@@ -64,10 +66,10 @@ export default function Footer() {
           © {new Date().getFullYear()} Billing Corner. All rights reserved. Powered by <a href="https://www.codingrim.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">CODINGRIM</a>.
         </p>
         <div className="flex gap-6">
-          <a href="https://www.instagram.com/billingcorner/" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Instagram</a>
-          <a href="https://www.linkedin.com/company/112598320/admin/dashboard/" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Linkedin</a>
-          <a href="https://www.facebook.com/profile.php?id=61573243436271" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Facebook</a>
-          <a href="https://www.youtube.com/@Billingcorner" className="text-slate-400 hover:text-slate-600 text-xs transition-colors">Youtube</a>
+          <a href="https://www.instagram.com/billingcorner/" className="text-slate-400 hover:text-slate-600 text-xs transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/112598320/admin/dashboard/" className="text-slate-400 hover:text-slate-600 text-xs transition-colors" target="_blank" rel="noopener noreferrer">Linkedin</a>
+          <a href="https://www.facebook.com/profile.php?id=61573243436271" className="text-slate-400 hover:text-slate-600 text-xs transition-colors" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.youtube.com/@Billingcorner" className="text-slate-400 hover:text-slate-600 text-xs transition-colors" target="_blank" rel="noopener noreferrer">Youtube</a>
         </div>
       </div>
     </footer>

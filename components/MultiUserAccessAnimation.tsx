@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useState, useRef } from 'react';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react';
 import { ShieldCheck, Lock, Users, User, UserCircle } from 'lucide-react';
 
 const tabs = [
@@ -33,13 +33,27 @@ const tabs = [
 
 export default function MultiUserAccessAnimation() {
   const [activeTab, setActiveTab] = useState(0);
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "end center"]
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    // Map 0-1 range to 0-3 tab indices
+    if (latest < 0.25) setActiveTab(0);
+    else if (latest < 0.5) setActiveTab(1);
+    else if (latest < 0.75) setActiveTab(2);
+    else setActiveTab(3);
+  });
 
   return (
-    <section className="relative w-full py-24 bg-slate-50 overflow-hidden border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section ref={sectionRef} className="relative w-full py-32 bg-slate-50 overflow-hidden border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         
         {/* Left Text Content - Tabs */}
-        <div className="relative z-50 flex flex-col justify-center">
+        <div className="relative z-30 flex flex-col justify-center lg:sticky lg:top-32">
            <motion.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +105,7 @@ export default function MultiUserAccessAnimation() {
         </div>
 
         {/* Right Visual Content */}
-        <div className="relative h-[500px] lg:h-[600px] w-full flex items-center justify-center mt-10 lg:mt-0">
+        <div className="relative min-h-[450px] sm:h-[500px] lg:h-[600px] w-full flex items-center justify-center mt-10 lg:mt-0">
           
           <div className="relative w-full max-w-2xl h-full flex items-center justify-center">
              
@@ -120,7 +134,7 @@ export default function MultiUserAccessAnimation() {
 
              {/* Staff Badge */}
              <motion.div 
-               className={`absolute z-20 top-[40%] left-[-10%] sm:-left-8 flex items-center transition-all duration-500`}
+               className={`absolute z-20 top-[40%] left-[-5%] sm:-left-8 flex items-center transition-all duration-500 scale-[0.8] sm:scale-100`}
                animate={{ opacity: activeTab === 1 ? 1 : 0.4, scale: activeTab === 1 ? 1.05 : 0.9 }}
              >
                <div className={`bg-white px-5 py-4 rounded-xl shadow-[0_15px_40px_rgba(0,0,0,0.1)] border flex flex-col items-center gap-2 relative z-10 transition-colors ${activeTab === 1 ? 'border-indigo-400 shadow-[0_15px_40px_rgba(99,102,241,0.2)]' : 'border-slate-100'}`}>
@@ -162,7 +176,7 @@ export default function MultiUserAccessAnimation() {
 
              {/* Network / Accountant */}
              <motion.div 
-               className={`absolute z-20 top-[45%] right-[-5%] sm:-right-4 flex flex-row-reverse items-center transition-all duration-500`}
+               className={`absolute z-20 top-[45%] right-0 sm:-right-4 flex flex-row-reverse items-center transition-all duration-500 scale-[0.8] sm:scale-100`}
                animate={{ opacity: activeTab === 2 ? 1 : 0.4, scale: activeTab === 2 ? 1.05 : 0.9 }}
              >
                <div className={`bg-white px-4 py-3 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] border flex flex-col items-center gap-2 relative z-10 transition-colors ${activeTab === 2 ? 'border-purple-400 shadow-purple-500/20' : 'border-slate-100'}`}>

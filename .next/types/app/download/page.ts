@@ -1,4 +1,4 @@
-// File: /home/codingrim-thinkpad-t580-2/Downloads/billing-corner/app/download/page.tsx
+// File: /home/codingrim-thinkpad-t580-2/Desktop/billingcorner/billingcorner/app/download/page.tsx
 import * as entry from '../../../../app/download/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

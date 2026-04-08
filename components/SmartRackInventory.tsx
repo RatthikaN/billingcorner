@@ -48,7 +48,7 @@ export default function SmartRackInventory() {
             >
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_30px_70px_-15px_rgba(99,102,241,0.2)] border border-white/50 bg-white/10 backdrop-blur-sm p-2">
                 <img
-                  src="/images/rack.png"
+                  src="/rack-white.png"
                   alt="Smart Rack-wise Inventory Interface"
                   className="w-full h-auto object-contain rounded-[2rem]"
                 />

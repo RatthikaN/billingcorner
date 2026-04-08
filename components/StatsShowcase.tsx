@@ -51,9 +51,9 @@ export default function StatsShowcase() {
   return (
     <section className="py-24 px-4 sm:px-6 relative overflow-hidden bg-gradient-to-br from-[#eff6ff] via-[#f5f3ff] to-[#faf5ff]">
       {/* Premium ambient background glows */}
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-300/15 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-pulse -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-300/15 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-pulse translate-x-1/3 translate-y-1/3" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-1/2 w-[800px] h-[400px] bg-indigo-300/10 rounded-full mix-blend-multiply filter blur-[120px] opacity-50 -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-64 h-64 md:w-[600px] md:h-[600px] bg-blue-300/15 rounded-full mix-blend-multiply filter blur-[70px] md:blur-[100px] opacity-70 animate-pulse -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 md:w-[600px] md:h-[600px] bg-purple-300/15 rounded-full mix-blend-multiply filter blur-[70px] md:blur-[100px] opacity-70 animate-pulse translate-x-1/3 translate-y-1/3" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/2 w-[90vw] h-[40vh] md:w-[800px] md:h-[400px] bg-indigo-300/10 rounded-full mix-blend-multiply filter blur-[80px] md:blur-[120px] opacity-50 -translate-x-1/2 -translate-y-1/2" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">

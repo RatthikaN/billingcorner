@@ -10,25 +10,25 @@ const features = [
     id: 'gstr',
     title: 'GSTR Filing',
     icon: FileText,
-    description: 'Export your GSTR1 data in a simple format (JSON) and easily file your GST returns. Also, get GSTR-2 and GSTR-3B reports that would help you/your CAs in easy GST tax filing.',
+    description: 'Simplified tax filing for modern businesses. Effortlessly generate GSTR-1, 2, and 3B reports in standard JSON formats to ensure 100% accuracy and ease for your CA from any device.',
   },
   {
     id: 'einvoicing',
     title: 'E-Invoicing',
     icon: Receipt,
-    description: 'Generate E-Invoices instantly with a single click. Our system automatically pushes the data to the IRP portal and fetches the IRN and QR code right onto your invoice.',
+    description: 'Instant IRP connectivity for every transaction. Generate government-validated E-Invoices with IRN and QR codes automatically fetched and ready on your device in seconds.',
   },
   {
     id: 'eway',
     title: 'E-way Billing',
     icon: Truck,
-    description: 'Create E-way bills directly from your invoices without logging into the government portal separately. Manage transportation details seamlessly in one place.',
+    description: 'Direct government portal integration made simple. Create and manage E-way bills seamlessly from your invoices without ever leaving the system, ensuring smooth logistics from any device.',
   },
   {
     id: 'tally',
     title: 'Data Export to Tally',
     icon: Download,
-    description: 'Integrate your accounting smoothly. Export all your sales, purchases, and expenses directly into a Tally-compatible format to share with your accountant instantly.',
+    description: 'Flawless accounting sync for your business data. Export all sales, purchases, and expense records in Tally-compatible formats to keep your accounts perfectly balanced from any device.',
   }
 ];
 
@@ -54,22 +54,42 @@ export default function ComplianceFeatures() {
               const isActive = activeTab === feature.id;
               const Icon = feature.icon;
               return (
-                <button
+                <div
                   key={feature.id}
                   onClick={() => setActiveTab(feature.id)}
-                  className={`flex items-center gap-5 px-6 py-5 rounded-2xl transition-all duration-300 text-left ${
+                  className={`flex flex-col px-6 py-5 rounded-2xl transition-all duration-300 text-left cursor-pointer border ${
                     isActive 
-                      ? 'bg-[#F3F4F9] text-[#5c4ce3] font-semibold border border-[#E9EAF5]' 
-                      : 'bg-transparent text-slate-500 hover:bg-slate-50 border border-transparent font-medium'
+                      ? 'bg-white text-[#5c4ce3] shadow-lg shadow-[#5c4ce3]/5 border-[#E9EAF5]' 
+                      : 'bg-transparent text-slate-500 hover:bg-slate-50 border-transparent'
                   }`}
                 >
-                  <div className={`flex items-center justify-center p-2.5 rounded-xl transition-colors ${
-                    isActive ? 'bg-white text-[#5c4ce3] shadow-sm' : 'bg-transparent text-slate-400'
-                  }`}>
-                    <Icon size={22} strokeWidth={isActive ? 2 : 1.5} />
+                  <div className="flex items-center gap-5">
+                    <div className={`flex items-center justify-center p-2.5 rounded-xl transition-colors ${
+                      isActive ? 'bg-[#F3F4F9] text-[#5c4ce3]' : 'bg-[#F3F4F9]/50 text-slate-400'
+                    }`}>
+                      <Icon size={22} strokeWidth={isActive ? 2 : 1.5} />
+                    </div>
+                    <span className={`text-lg transition-colors ${isActive ? 'font-bold' : 'font-medium'}`}>
+                      {feature.title}
+                    </span>
                   </div>
-                  <span className="text-lg tracking-wide">{feature.title}</span>
-                </button>
+                  
+                  <AnimatePresence>
+                    {isActive && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-slate-500 text-sm leading-relaxed mt-4 pl-1">
+                          {feature.description}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               );
             })}
           </div>

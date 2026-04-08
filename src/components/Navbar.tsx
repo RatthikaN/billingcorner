@@ -17,6 +17,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Features', path: '/features' },
   { name: 'Pricing', path: '/pricing' },
+  // { name: 'Become a Dealer', path: '/become-a-dealer' },
   { name: 'Blog', path: '/blog' },
   // { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
@@ -38,18 +39,18 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
-        scrolled ? 'bg-white/80 backdrop-blur-md border-bottom border-slate-200 py-3' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-6 py-4',
+        scrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-200 py-3' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center group">
-          <div className="relative w-64 h-20 sm:w-80 sm:h-24 group-hover:scale-105 transition-transform">
+          <div className="relative w-48 h-16 sm:w-64 sm:h-20 md:w-80 md:h-24 group-hover:scale-105 transition-transform">
             <Image
-              src="/images/billing_logo-removebg-preview.png"
+              src="/logo.svg"
               alt="Billing Corner Logo"
               fill
-              className="object-contain object-left"
+              className="object-contain object-left pr-4"
               priority
             />
           </div>

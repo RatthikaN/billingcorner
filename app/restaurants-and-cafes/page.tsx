@@ -17,6 +17,7 @@ export default function RestaurantSolution() {
         </>
       }
       heroImage="/images/solutions/restaurant_hero.png"
+      whatWeOfferBgImage="/images/solutions/restaurants_what_we_offer_bg.png"
       whatWeOfferTitle="Why Choose Billing Corner for Your Restaurant or Café?"
       features={[
         {

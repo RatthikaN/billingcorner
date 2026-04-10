@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { 
   ArrowRight, 
@@ -21,12 +22,67 @@ export default function DealerJoin() {
     location: '',
     experience: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would submit to an API
-    alert('Thank you for your interest! Our dealer relations team will contact you shortly.');
+    setLoading(true);
+    
+    try {
+      const response = await fetch('/api/dealer-join', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit application');
+      }
+
+      setSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        location: '',
+        experience: ''
+      });
+    } catch (err) {
+      console.error(err);
+      alert('There was an issue submitting your application. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
+
+  if (success) {
+    return (
+      <div className="bg-white min-h-screen pt-32 pb-24 px-6 flex items-center justify-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="max-w-md w-full text-center p-12 rounded-[3.5rem] bg-slate-50 border border-slate-100"
+        >
+          <div className="w-20 h-20 bg-emerald-500 rounded-[2rem] flex items-center justify-center text-white mx-auto mb-8 shadow-xl shadow-emerald-500/20">
+            <ShieldCheck size={40} />
+          </div>
+          <h2 className="text-3xl font-bold mb-4">Application Received!</h2>
+          <p className="text-slate-500 mb-10 leading-relaxed font-light">
+            Thank you for your interest in joining the Billing Corner network. Our dealer relations team will review your application and contact you within 24-48 hours.
+          </p>
+          <Link 
+            href="/become-a-dealer" 
+            className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
+          >
+            Back to Dealer Program <ArrowRight size={18} />
+          </Link>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 px-6 overflow-x-hidden">

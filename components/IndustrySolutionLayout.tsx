@@ -18,6 +18,7 @@ interface IndustrySolutionProps {
   description: React.ReactNode;
   heroImage: string;
   whatWeOfferTitle?: string;
+  whatWeOfferBgImage?: string;
   features: Feature[];
   whyChooseUs: string[];
   closingTitle: string;
@@ -30,6 +31,7 @@ export default function IndustrySolutionLayout({
   description,
   heroImage,
   whatWeOfferTitle = "What We Offer",
+  whatWeOfferBgImage,
   features,
   whyChooseUs,
   closingTitle,
@@ -87,10 +89,24 @@ export default function IndustrySolutionLayout({
       </section>
 
       {/* What We Offer */}
-      <section className="py-24 px-6 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+      <section
+        className="py-24 px-6 relative"
+        style={whatWeOfferBgImage ? {
+          backgroundImage: `url(${whatWeOfferBgImage})`,
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        } : { backgroundColor: '#f8fafc' }}
+      >
+        {/* Overlay for readability */}
+        {whatWeOfferBgImage && (
+          <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]" />
+        )}
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{whatWeOfferTitle}</h2>
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${
+              whatWeOfferBgImage ? 'text-white' : 'text-slate-900'
+            }`}>{whatWeOfferTitle}</h2>
             <div className="w-20 h-1.5 bg-primary mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -101,10 +117,18 @@ export default function IndustrySolutionLayout({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all"
+                className={`p-8 rounded-2xl shadow-sm border transition-all hover:shadow-lg ${
+                  whatWeOfferBgImage
+                    ? 'bg-white/10 border-white/20 backdrop-blur-md hover:bg-white/20'
+                    : 'bg-white border-slate-100 hover:shadow-md'
+                }`}
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                <h3 className={`text-xl font-bold mb-3 ${
+                  whatWeOfferBgImage ? 'text-white' : 'text-slate-900'
+                }`}>{feature.title}</h3>
+                <p className={`leading-relaxed ${
+                  whatWeOfferBgImage ? 'text-white/80' : 'text-slate-600'
+                }`}>{feature.description}</p>
               </motion.div>
             ))}
           </div>

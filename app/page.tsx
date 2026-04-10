@@ -288,7 +288,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="w-full md:w-[40%] shrink-0"
             >
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed font-light mb-8">
+              <p className="text-slate-600 text-left md:text-lg leading-relaxed font-light mb-8">
                 Create GST bills instantly with a fast and easy online billing system. Generate accurate invoices and share them with your customers via WhatsApp, email, or download in seconds. Manage your business smarter, anytime and anywhere.
               </p>
               <Link href="/download" className="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl inline-flex items-center gap-2 group hover:bg-primary transition-all duration-300">

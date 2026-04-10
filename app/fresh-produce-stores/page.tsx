@@ -17,6 +17,7 @@ export default function FreshProduceSolution() {
         </>
       }
       heroImage="/images/solutions/fresh_produce_hero.png"
+      whatWeOfferBgImage="/images/solutions/fresh_produce_what_we_offer_bg.png"
       whatWeOfferTitle="Why Choose Billing Corner for Fresh Produce Stores?"
       features={[
         {

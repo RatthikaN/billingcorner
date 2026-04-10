@@ -17,6 +17,7 @@ export default function ApparelSolution() {
         </>
       }
       heroImage="/images/solutions/apparel_hero.png"
+      whatWeOfferBgImage="/apparel_what_we_offer_bg.png"
       whatWeOfferTitle="Advanced Features for Apparel Stores"
       features={[
         {

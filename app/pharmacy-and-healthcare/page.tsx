@@ -17,6 +17,7 @@ export default function PharmacySolution() {
         </>
       }
       heroImage="/images/solutions/pharmacy_hero.png"
+      whatWeOfferBgImage="/images/solutions/pharmacy_what_we_offer_bg.png"
       whatWeOfferTitle="Advanced Features for Pharmacies"
       features={[
         {

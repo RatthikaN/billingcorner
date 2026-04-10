@@ -1,6 +1,27 @@
 import { blogPosts } from '@/src/data/blogPosts';
 import BlogPostClient from './BlogPostClient';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found | Billing Corner',
+    };
+  }
+
+  return {
+    title: `${post.title} | Billing Corner Blog`,
+    description: post.excerpt || `Read our latest blog post about ${post.title}.`,
+  };
+}
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({

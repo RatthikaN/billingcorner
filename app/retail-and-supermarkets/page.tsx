@@ -17,6 +17,7 @@ export default function RetailSolution() {
         </>
       }
       heroImage="/images/solutions/retail_hero.png"
+      whatWeOfferBgImage="/images/solutions/retail_what_we_offer_bg.png"
       features={[
         {
           title: "Point of Sale (POS) Systems",

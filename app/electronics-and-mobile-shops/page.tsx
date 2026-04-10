@@ -17,6 +17,7 @@ export default function ElectronicsSolution() {
         </>
       }
       heroImage="/images/solutions/electronics_hero.png"
+      whatWeOfferBgImage="/images/solutions/electronics_bg.png"
       features={[
         {
           title: "Smart Billing (POS) System",

@@ -28,6 +28,8 @@ const plans = [
   {
     name: 'Plan A (Basic)',
     price: '499',
+    mrp: '1,799',
+    discountPercent: 72.26,
     period: 'per year',
     desc: 'Perfect for getting started.',
     features: [
@@ -39,12 +41,14 @@ const plans = [
       { text: 'E-Way Bill Support', included: false },
     ],
     cta: 'Start Basic Plan',
-    href: '/download',
+    href: '/checkout?plan=basic',
     popular: false,
   },
   {
     name: 'Plan B (Pro)',
     price: '1,499',
+    mrp: '6,999',
+    discountPercent: 67,
     period: 'per year',
     desc: 'Best for growing businesses.',
     features: [
@@ -55,8 +59,8 @@ const plans = [
       { text: 'Full Reports Access', included: true },
       { text: 'E-Way Bill Support', included: true },
     ],
-    cta: 'Upgrade Plan',
-    href: '/download',
+    cta: 'Get Pro Plan',
+    href: '/checkout?plan=pro',
     popular: true,
   }
 ];
@@ -97,9 +101,15 @@ export default function Pricing() {
                 <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">{plan.name}</h3>
                 <p className="text-slate-500 text-sm italic">{plan.desc}</p>
               </div>
-              <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-5xl font-bold text-slate-900 tracking-tighter">₹{plan.price}</span>
-                <span className="text-slate-500 font-medium">/ {plan.period.replace('for ', '').replace('per ', '')}</span>
+              <div className="flex flex-col mb-8 gap-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-semibold text-slate-400 line-through">₹{plan.mrp}</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-700">Save {plan.discountPercent}%</span>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-bold text-slate-900 tracking-tighter">₹{plan.price}</span>
+                  <span className="text-slate-500 font-medium">/ {plan.period.replace('for ', '').replace('per ', '')}</span>
+                </div>
               </div>
               <Link href={plan.href} className={`w-full py-4 rounded-2xl font-bold mb-10 transition-all block text-center shadow-lg ${plan.popular ? 'bg-primary text-white hover:bg-indigo-600 shadow-primary/30' : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
                 }`}>

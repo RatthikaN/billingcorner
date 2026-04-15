@@ -12,11 +12,17 @@ if (!dbUrl) {
 if (process.env.NODE_ENV === 'production') {
   pool = new Pool({
     connectionString: dbUrl,
+    ssl: {
+      rejectUnauthorized: false
+    }
   });
 } else {
   if (!(global as any).pgPool) {
     (global as any).pgPool = new Pool({
       connectionString: dbUrl,
+      ssl: {
+        rejectUnauthorized: false
+      }
     });
   }
   pool = (global as any).pgPool;

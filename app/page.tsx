@@ -274,7 +274,7 @@ export default function Home() {
             Fast & Easy Access
           </motion.div>
           <div className="text-center mb-16 md:mb-20 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-[1.1] tracking-tighter">
+            <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-slate-900 leading-[1.1] tracking-tighter">
               Create instant <span className="text-primary italic">GST Billing</span> online and <br /> share your customers
             </h2>
           </div>
@@ -372,7 +372,7 @@ export default function Home() {
 
       <SaaSBanner />
        <FAQ limit={7} showViewAll={true} />
-      <CTABanner />
+      {/* <CTABanner /> */}
       {/* <TestimonialMarquee /> */}
 
       {/* Nexus CTA Section — Unique Parallax Experience */}

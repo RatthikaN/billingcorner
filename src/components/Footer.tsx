@@ -9,6 +9,8 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-slate-900 mb-6">Our Policies</h4>
           <ul className="space-y-4">
+            {/* <li><Link href="/terms-and-conditions" className="text-slate-500 hover:text-primary text-sm transition-colors">Terms & Conditions</Link></li> */}
+            <li><Link href="/blog" className="text-slate-500 hover:text-primary text-sm transition-colors">Blog</Link></li>
             <li><Link href="/terms-and-conditions" className="text-slate-500 hover:text-primary text-sm transition-colors">Terms & Conditions</Link></li>
             <li><Link href="/privacy-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">Privacy Policy</Link></li>
             <li><Link href="/refund-policy" className="text-slate-500 hover:text-primary text-sm transition-colors">Refund / Cancellation Policy</Link></li>
@@ -36,6 +38,7 @@ export default function Footer() {
             <li><Link href="/mobile-app" className="text-slate-500 hover:text-primary text-sm transition-colors">Mobile App </Link></li>
             <li><Link href="/cloud-dashboard" className="text-slate-500 hover:text-primary text-sm transition-colors">Cloud Dashboard</Link></li>
             <li><Link href="/become-a-dealer" className="text-slate-500 hover:text-primary text-sm transition-colors">Become a Dealer</Link></li>
+            <li><Link href="/contact" className="text-slate-500 hover:text-primary text-sm transition-colors">Contact Us</Link></li>
 
             {/* <li><Link href="/products/ecommerce" className="text-slate-500 hover:text-primary text-sm transition-colors">E-commerce Integration</Link></li> */}
             {/* <li><Link href="/advanced-inventory-management" className="text-slate-500 hover:text-primary text-sm transition-colors">Advanced Inventory Management</Link></li> */}

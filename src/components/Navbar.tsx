@@ -18,7 +18,7 @@ const navLinks = [
   { name: 'Features', path: '/features' },
   { name: 'Pricing', path: '/pricing' },
   // { name: 'Become a Dealer', path: '/become-a-dealer' },
-  { name: 'Blog', path: '/blog' },
+  { name: 'Download', path: '/download' },
   // { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
 ];

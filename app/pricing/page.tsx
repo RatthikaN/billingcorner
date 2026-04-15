@@ -40,8 +40,8 @@ const plans = [
       { text: 'Full Reports Access', included: false },
       { text: 'E-Way Bill Support', included: false },
     ],
-    cta: 'Start Basic Plan',
-    href: '/checkout?plan=basic',
+    cta: 'Select Basic Plan',
+    href: '/contact',
     popular: false,
   },
   {
@@ -59,8 +59,8 @@ const plans = [
       { text: 'Full Reports Access', included: true },
       { text: 'E-Way Bill Support', included: true },
     ],
-    cta: 'Get Pro Plan',
-    href: '/checkout?plan=pro',
+    cta: 'Select Pro Plan',
+    href: '/contact',
     popular: true,
   }
 ];
@@ -130,18 +130,6 @@ export default function Pricing() {
             </motion.div>
           ))}
         </div>
-
-        {/* Razorpay Secure Payment Note */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="max-w-lg mx-auto mt-20 flex items-center justify-center gap-3 text-slate-700 bg-emerald-50 px-6 py-4 rounded-2xl border border-emerald-200/60 shadow-sm"
-        >
-          <ShieldCheck size={28} className="text-emerald-500 shrink-0" />
-          <span className="font-semibold text-sm">Payments are secure and encrypted via Razorpay.</span>
-        </motion.div>
-
       </section>
 
       <FAQ customFaqs={pricingFaqs} title="Pricing FAQ" />

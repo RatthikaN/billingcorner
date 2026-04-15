@@ -35,9 +35,18 @@ export default function SaaSBanner() {
 
             {/* ── Left — Text + CTA ── */}
             <div className="w-full md:w-[55%] flex flex-col items-start">
-              <span className="inline-block text-blue-200 text-xs font-bold uppercase tracking-[0.25em] mb-4">
-                ✦ All-in-One Billing Platform
-              </span>
+              <motion.div
+                         initial={{ opacity: 0, y: 20 }}
+                         animate={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.5 }}
+                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10 "
+                       >
+                         <span className="relative flex h-2 w-2">
+                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                           <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                         </span>
+                         All-in-One Billing Platform
+                       </motion.div>
 
               <h2 className="text-3xl md:text-3xl xl:text-4xl font-medium text-white leading-[1.1] tracking-tighter mb-5">
                Carry Your Business <br />

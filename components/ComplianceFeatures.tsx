@@ -41,7 +41,19 @@ export default function ComplianceFeatures() {
     <section className="py-24 px-6 bg-white relative z-10 font-sans">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 leading-[1.3] mb-12 max-w-3xl tracking-tight">
+         <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10 "
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            GST Compliance
+          </motion.div>
+        <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-slate-900 leading-[1.3] mb-12 max-w-3xl tracking-tight">
           Experience Effortless GST Compliance with <span className="text-slate-800">Billing Corner</span> Invoicing Software
         </h2>
 

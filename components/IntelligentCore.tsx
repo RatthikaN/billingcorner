@@ -32,7 +32,10 @@ export default function IntelligentCore() {
                 viewport={{ once: true }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-fuchsia-300 text-xs font-bold uppercase tracking-[0.2em] mb-8 shadow-sm backdrop-blur-md"
               >
-                <Sparkles size={14} className="text-fuchsia-400" />
+                <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-300 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-300"></span>
+            </span>
                 Cross-Platform Synergy
               </motion.div>
               
@@ -40,7 +43,7 @@ export default function IntelligentCore() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-sm"
+                className=" text-4xl md:text-5xl xl:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight drop-shadow-sm"
               >
                 Intelligent Core Platform <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-300">

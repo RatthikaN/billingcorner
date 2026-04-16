@@ -23,18 +23,36 @@ import {
 
 const plans = [
   {
-    name: "Plan 1",
+    name: "Plan A (Silver)",
     price: "₹499",
+    mrp: "1,799",
+    discountPercent: 72.26,
     gst: "+ 18% GST",
-    tag: "Most Popular",
-    color: "from-blue-500 to-indigo-600"
+    tag: "Silver Tier",
+    metal: "silver",
+    theme: {
+      bg: "bg-gradient-to-br from-slate-50 to-slate-200/50",
+      border: "border-slate-300",
+      accent: "text-slate-600",
+      badge: "bg-slate-500",
+      button: "bg-slate-800 hover:bg-slate-900 shadow-slate-200"
+    }
   },
   {
-    name: "Plan 2",
+    name: "Plan B (Gold)",
     price: "₹1499",
+    mrp: "6,999",
+    discountPercent: 78.58,
     gst: "+ 18% GST",
-    tag: "Premium",
-    color: "from-fuchsia-500 to-purple-600"
+    tag: "Gold Tier",
+    metal: "gold",
+    theme: {
+      bg: "bg-gradient-to-br from-amber-50 to-yellow-100/50",
+      border: "border-amber-400",
+      accent: "text-amber-600",
+      badge: "bg-amber-500",
+      button: "bg-amber-500 hover:bg-amber-600 shadow-amber-200"
+    }
   }
 ];
 
@@ -46,27 +64,6 @@ const benefits = [
     color: "text-blue-500",
     bg: "bg-blue-500/10"
   },
-  // {
-  //   title: "Lifetime Renewal Bonus",
-  //   description: "Earn on every single customer renewal, forever.",
-  //   icon: History,
-  //   color: "text-emerald-500",
-  //   bg: "bg-emerald-500/10"
-  // },
-  // {
-  //   title: "Zero Recurring Costs",
-  //   description: "Start small, grow big with no hidden fees or charges.",
-  //   icon: Zap,
-  //   color: "text-amber-500",
-  //   bg: "bg-amber-500/10"
-  // },
-  // {
-  //   title: "Simple Earning Model",
-  //   description: "Transparent tracking and blazingly fast payouts.",
-  //   icon: Globe,
-  //   color: "text-fuchsia-500",
-  //   bg: "bg-fuchsia-500/10"
-  // }
 ];
 
 const projectionsPlan1 = [
@@ -101,11 +98,7 @@ export default function BecomeDealer() {
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans overflow-x-hidden">
       
-      {/* 
-        ======================================================================
-        HERO SECTION
-        ======================================================================
-      */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-slate-100">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -mr-96 -mt-96 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[100px] -ml-72 -mb-72 pointer-events-none" />
@@ -179,16 +172,11 @@ export default function BecomeDealer() {
         </div>
       </section>
 
-      {/* 
-        ======================================================================
-        WHY BECOME A DEALER
-        ======================================================================
-      */}
+      {/* Why Become a Dealer Section */}
       <section className="py-24 px-6 bg-white relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Why Become a Dealer?</h2>
-            {/* <p className="text-slate-500 text-lg max-w-2xl mx-auto">Build a steady, scalable income stream with one of the most rewarding programs in India.</p> */}
           </div>
           
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -202,9 +190,10 @@ export default function BecomeDealer() {
                   Unbeatable <span className="text-primary italic">40% Flat Commission</span>
                 </h3>
                 <p className="text-slate-600 text-lg text-left leading-relaxed font-light">
-We reward our partners with a flat 40% commission on every sale for the first 1,000 dealers.
-No quotas, no hidden charges—just complete transparency and real earnings.
-Build a strong, recurring income stream with us.                </p>
+                  We reward our partners with a flat 40% commission on every sale for the first 1,000 dealers.
+                  No quotas, no hidden charges—just complete transparency and real earnings.
+                  Build a strong, recurring income stream with us.                
+                </p>
               </motion.div>
 
               {benefits.map((benefit, idx) => (
@@ -246,11 +235,7 @@ Build a strong, recurring income stream with us.                </p>
         </div>
       </section>
 
-      {/* 
-        ======================================================================
-        PRICING PLANS
-        ======================================================================
-      */}
+      {/* Customer Plans Section */}
       <section className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -265,34 +250,52 @@ Build a strong, recurring income stream with us.                </p>
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className={`relative p-10 rounded-[2.5rem] bg-white border border-slate-200 shadow-xl overflow-hidden group hover:border-primary/50 transition-colors`}
+                className={`relative p-10 rounded-[2.5rem] bg-white border border-slate-200 shadow-xl overflow-hidden group hover:border-slate-300 transition-all`}
               >
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${plan.color} opacity-10 rounded-bl-[4rem] group-hover:scale-110 transition-transform`} />
+                {/* Metallic Corner Accent */}
+                <div className={`absolute top-0 right-0 w-32 h-32 overflow-hidden pointer-events-none`}>
+                  <div className={`absolute top-0 right-0 w-[140%] h-[40px] ${plan.metal === 'gold' ? 'bg-amber-400' : 'bg-slate-300'} transform rotate-45 translate-x-[30%] translate-y-[20%] flex items-center justify-center shadow-lg`}>
+                    <span className="text-[10px] font-black text-white uppercase tracking-widest">
+                      {plan.metal}
+                    </span>
+                  </div>
+                </div>
+
                 <div className="relative z-10">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest mb-6">
+                  <span className={`inline-block px-4 py-1.5 rounded-full ${plan.metal === 'gold' ? 'bg-amber-50 text-amber-600 border border-amber-200' : 'bg-slate-50 text-slate-600 border border-slate-200'} text-[10px] font-bold uppercase tracking-widest mb-6`}>
                     {plan.tag}
                   </span>
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-5xl font-bold">{plan.price}</span>
-                    <span className="text-lg text-slate-400 font-medium">/ year</span>
-                  </div>
-                  <p className="text-slate-500 mb-8 font-medium">{plan.gst}</p>
-                  
-                  <div className="space-y-4 mb-10 text-slate-600">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle2 size={18} className="text-emerald-500" />
-                      <span>Full Software Access</span>
+                  <h3 className="text-3xl font-black mb-2 tracking-tight text-slate-900">{plan.name}</h3>
+                  <div className="flex flex-col gap-1 mb-6">
+                    <div className="flex items-center gap-2">
+                       <span className="text-xl font-semibold line-through text-slate-400">₹{plan.mrp}</span>
+                       <span className={`text-[10px] font-black px-2 py-0.5 rounded-md ${plan.metal === 'gold' ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-700'}`}>Save {plan.discountPercent}%</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle2 size={18} className="text-emerald-500" />
-                      <span>Automatic Updates</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-6xl font-black tracking-tighter text-slate-900">{plan.price}</span>
+                      <span className="text-slate-500 font-bold">/ year</span>
                     </div>
+                    <p className="text-slate-500 font-bold">{plan.gst}</p>
                   </div>
                   
-                  <button className="w-full py-4 rounded-2xl bg-slate-900 text-white font-bold transition-all hover:bg-primary active:scale-95">
+                  <div className="space-y-4 mb-12">
+                    <div className="flex items-center gap-3">
+                      <div className={`p-1 rounded-full ${plan.metal === 'gold' ? 'bg-amber-500/10 text-amber-600' : 'bg-slate-500/10 text-slate-600'}`}>
+                        <CheckCircle2 size={18} strokeWidth={3} />
+                      </div>
+                      <span className="font-bold text-slate-900">Full Software Access</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className={`p-1 rounded-full ${plan.metal === 'gold' ? 'bg-amber-500/10 text-amber-600' : 'bg-slate-500/10 text-slate-600'}`}>
+                        <CheckCircle2 size={18} strokeWidth={3} />
+                      </div>
+                      <span className="font-bold text-slate-900">Automatic Updates</span>
+                    </div>
+                  </div>
+                  
+                  <Link href="/become-a-dealer/join" className={`w-full py-5 rounded-2xl text-white font-black transition-all block text-center active:scale-95 shadow-lg ${plan.metal === 'gold' ? 'bg-amber-500 hover:bg-amber-600 shadow-amber-200' : 'bg-slate-800 hover:bg-slate-900 shadow-slate-200'}`}>
                     Select This Plan
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}

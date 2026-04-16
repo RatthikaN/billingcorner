@@ -89,15 +89,13 @@ export default function GstComplianceTabs() {
           >
             Compliance Excellence
           </motion.span>
-          <motion.h2
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 leading-[1.1] tracking-tighter"
+            className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 leading-[1.1] mb-12 max-w-4xl mx-auto tracking-tighter"
           >
-            Experience Effortless <span className="text-primary italic">GST Compliance</span> <br className="hidden md:block" />
-            with Billing Corner Invoicing Software
+            Experience Effortless <span className="text-primary italic">GST Compliance</span> with Billing Corner Invoicing Software
           </motion.h2>
         </div>
 

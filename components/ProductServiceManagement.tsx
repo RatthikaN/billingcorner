@@ -28,7 +28,7 @@ export default function ProductServiceManagement() {
               <h3 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight leading-tight mb-4">
                 Simple Product Management
               </h3>
-              <p className="text-slate-600 font-medium leading-relaxed">
+              <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
                 Add, organize, and categorize your products effortlessly. Keep track of your catalog, set custom pricing rules, and manage stock natively.
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function ProductServiceManagement() {
               <h3 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight leading-tight mb-4">
                 Easy Service Management
               </h3>
-              <p className="text-slate-600 font-medium leading-relaxed">
+              <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
                 Streamline your service billing with robust tools. Send quotations, track billable time, and monitor expenses smoothly in one dashboard.
               </p>
             </div>

@@ -43,7 +43,7 @@ export default function IntelligentCore() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className=" text-4xl md:text-5xl xl:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight drop-shadow-sm"
+                className=" text-3xl md:text-4xl xl:text-5xl font-medium text-white mb-6 leading-tight tracking-tight drop-shadow-sm"
               >
                 Intelligent Core Platform <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-300">
@@ -55,7 +55,7 @@ export default function IntelligentCore() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-indigo-100/70 text-lg leading-relaxed max-w-md font-light"
+                className="text-indigo-100/70 text-lg leading-relaxed max-w-md font-medium"
               >
                 Engineered for speed, consistency, and absolute synchronization. Our unified architecture ensures your business data is blazingly fast and perfectly synced across every device.
               </motion.p>

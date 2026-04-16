@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
 
         <div>
-          <h4 className="font-bold text-slate-900 mb-6">Our Policies</h4>
+          <h4 className="font-bold text-slate-900 mb-6">Our Information</h4>
           <ul className="space-y-4">
             {/* <li><Link href="/terms-and-conditions" className="text-slate-500 hover:text-primary text-sm transition-colors">Terms & Conditions</Link></li> */}
             <li><Link href="/blog" className="text-slate-500 hover:text-primary text-sm transition-colors">Blog</Link></li>
@@ -36,7 +36,7 @@ export default function Footer() {
           <ul className="space-y-4">
             <li><Link href="/desktop-billing" className="text-slate-500 hover:text-primary text-sm transition-colors">Desktop Billing Software</Link></li>
             <li><Link href="/mobile-app" className="text-slate-500 hover:text-primary text-sm transition-colors">Mobile App </Link></li>
-            <li><Link href="/cloud-dashboard" className="text-slate-500 hover:text-primary text-sm transition-colors">Cloud Dashboard</Link></li>
+            {/* <li><Link href="/cloud-dashboard" className="text-slate-500 hover:text-primary text-sm transition-colors">Cloud Dashboard</Link></li> */}
             <li><Link href="/become-a-dealer" className="text-slate-500 hover:text-primary text-sm transition-colors">Become a Dealer</Link></li>
             <li><Link href="/contact" className="text-slate-500 hover:text-primary text-sm transition-colors">Contact Us</Link></li>
 

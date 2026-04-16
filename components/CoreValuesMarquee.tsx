@@ -185,7 +185,7 @@ export default function CoreValuesMarquee() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-4xl md:text-5xl xl:text-6xl font-semibold text-slate-900 tracking-tight"
+          className="text-3xl md:text-4xl xl:text-5xl font-medium  text-slate-900 tracking-tight"
         >
           Values that Drive <span className="text-primary italic">Innovation</span>
         </motion.h2>

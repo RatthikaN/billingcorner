@@ -103,14 +103,14 @@ export default function FAQ({ customFaqs, title = "Frequently Asked Questions", 
     }
 
     return (
-        <section className="py-24 px-6 bg-white relative z-10 border-t border-slate-50">
+        <section className="py-24 px-6 bg-white relative z-10 border-t border-slate-50 mt-10">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
+                        className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900  mb-4"
                     >
                         {title}
                     </motion.h2>

@@ -53,9 +53,14 @@ export default function ComplianceFeatures() {
             </span>
             GST Compliance
           </motion.div>
-        <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-slate-900 leading-[1.3] mb-12 max-w-3xl tracking-tight">
-          Experience Effortless GST Compliance with <span className="text-slate-800">Billing Corner</span> Invoicing Software
-        </h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 leading-[1.1] mb-12 max-w-4xl tracking-tighter"
+        >
+          Experience Effortless <span className="text-primary italic">GST Compliance</span> with Billing Corner Invoicing Software
+        </motion.h2>
 
         {/* Content layout */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-12">
@@ -95,7 +100,7 @@ export default function ComplianceFeatures() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="text-slate-500 text-sm leading-relaxed mt-4 pl-1">
+                        <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mt-4 pl-1">
                           {feature.description}
                         </p>
                       </motion.div>
@@ -233,7 +238,7 @@ export default function ComplianceFeatures() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -5 }}
                     transition={{ duration: 0.3 }}
-                    className="text-slate-600 leading-relaxed text-[15px] mb-8 font-medium"
+                    className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-8"
                   >
                     {activeFeature.description}
                   </motion.p>

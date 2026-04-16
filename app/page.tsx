@@ -172,7 +172,7 @@ export default function Home() {
               className="mb-10 max-w-lg"
             >
               <h2 className="text-xl md:text-2xl font-medium text-slate-900 mb-3 tracking-tight">Built for every businesses</h2>
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed font-light">
+              <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
                 A modern and easy-to-use online GST Billing Software to take your business to the next level. Access it anytime, anywhere.
               </p>
             </motion.div>
@@ -274,7 +274,7 @@ export default function Home() {
             Fast & Easy Access
           </motion.div>
           <div className="text-center mb-16 md:mb-20 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-slate-900 leading-[1.1] tracking-tighter">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 leading-[1.1] tracking-tighter">
               Create instant <span className="text-primary italic">GST Billing</span> online and <br /> share your customers
             </h2>
           </div>
@@ -288,7 +288,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="w-full md:w-[40%] shrink-0"
             >
-              <p className="text-slate-600 text-left md:text-lg leading-relaxed font-light mb-8">
+              <p className="text-slate-600 text-base md:text-lg text-left leading-relaxed font-medium mb-8">
                 Create GST bills instantly with a fast and easy online billing system. Generate accurate invoices and share them with your customers via WhatsApp, email, or download in seconds. Manage your business smarter, anytime and anywhere.
               </p>
               <Link href="/download" className="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl inline-flex items-center gap-2 group hover:bg-primary transition-all duration-300">

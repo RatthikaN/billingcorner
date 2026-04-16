@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: 'Billing Corner | Smart Billing Software for Modern Businesses',
   description: 'A comprehensive billing, inventory management, and GST compliance software for Indian merchants.',
   icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/billing-corner-logo-fav-Asset 9svgformat.svg',
+    apple: '/billing-corner-logo-fav-Asset 9svgformat.svg',
   },
 };
 

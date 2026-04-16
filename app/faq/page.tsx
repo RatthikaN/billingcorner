@@ -5,16 +5,16 @@ import FAQ from '@/src/components/FAQ';
 export default function FAQPage() {
     return (
         <div className="pb-24">
-            <section className="pt-32 pb-16 px-6 text-center">
+            {/* <section className="pt-32 pb-16 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-5xl md:text-7xl font-semibold text-slate-900 mb-8">
+                    <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8">
                         Frequently Asked <span className="text-primary">Questions</span>
                     </h1>
-                    <p className="text-slate-600 text-xl">
+                    <p className="text-slate-600 text-base font-medium">
                         Everything you need to know about Billing Corner. Can't find the answer you're looking for? Reach out to our team.
                     </p>
                 </div>
-            </section>
+            </section> */}
 
             <FAQ />
 {/*             

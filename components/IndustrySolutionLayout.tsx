@@ -164,7 +164,7 @@ export default function IndustrySolutionLayout({
       </section>
 
       <SaaSBanner />
-      <CTABanner />
+      {/* <CTABanner /> */}
 
     </div>
   );

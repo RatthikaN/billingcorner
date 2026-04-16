@@ -8,31 +8,26 @@ const testimonialsRow1 = [
     name: "Alex Rivera",
     role: "Head of Operations",
     text: "The role-based access control completely transformed how our team manages multi-location stores. It's incredibly intuitive and secure.",
-    avatar: "https://i.pravatar.cc/150?img=11"
   },
   {
     name: "Sarah Jenkins",
     role: "Financial Director",
     text: "GST compliance used to take us days at the end of every month. Now, it's literally automated in seconds. A total lifesaver.",
-    avatar: "https://i.pravatar.cc/150?img=5"
   },
   {
     name: "David Chen",
     role: "Retail Owner",
     text: "The sleek POS interface is so fast that our checkout lines have practically vanished. And it looks incredibly premium on our tablets.",
-    avatar: "https://i.pravatar.cc/150?img=33"
   },
   {
     name: "Emma Stone",
     role: "Inventory Manager",
     text: "Real-time stock alerts and precise unit tracking saved us from stockouts during the holiday rush. Best inventory tool I've used.",
-    avatar: "https://i.pravatar.cc/150?img=47"
   },
   {
     name: "Rahul Mehta",
     role: "E-commerce Founder",
     text: "Having a single dashboard for both online sales and physical POS is a game-changer. The UI is just gorgeous and fast.",
-    avatar: "https://i.pravatar.cc/150?img=15"
   }
 ];
 
@@ -41,31 +36,26 @@ const testimonialsRow2 = [
     name: "Jessica Taylor",
     role: "Accounting Lead",
     text: "The one-click tally export integration is flawless. It bridges the gap between our modern billing needs and legacy accounting.",
-    avatar: "https://i.pravatar.cc/150?img=44"
   },
   {
     name: "Marcus Johnson",
     role: "CEO, TechShop",
     text: "I love the fact that I can monitor my entire retail chain's sales from my iPhone while traveling. The cross-device sync is instant.",
-    avatar: "https://i.pravatar.cc/150?img=53"
   },
   {
     name: "Priya Sharma",
     role: "Boutique Owner",
     text: "The thermal printer support works out of the box without any messy drivers. Beautiful receipt templates really impress our clients.",
-    avatar: "https://i.pravatar.cc/150?img=32"
   },
   {
     name: "Tom Barker",
     role: "Warehouse Supervisor",
     text: "Barcode scanning integration is ridiculously fast. Processing hundreds of items takes minutes instead of hours now.",
-    avatar: "https://i.pravatar.cc/150?img=12"
   },
   {
     name: "Elena Rodriguez",
     role: "VP of Sales",
     text: "We switched from a legacy enterprise system and haven't looked back. The speed, the analytics, the modern design – 10/10.",
-    avatar: "https://i.pravatar.cc/150?img=28"
   }
 ];
 
@@ -75,16 +65,11 @@ function TestimonialCard({ item }: { item: any }) {
       {/* Subtle top glow edge */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
-      <p className="text-slate-300 text-base leading-relaxed font-light">
+      <p className="text-slate-300 text-base leading-relaxed font-medium">
         "{item.text}"
       </p>
       
       <div className="mt-auto flex items-center gap-4">
-        <img 
-          src={item.avatar} 
-          alt={item.name} 
-          className="w-12 h-12 rounded-full object-cover border border-slate-600 shadow-lg" 
-        />
         <div>
           <div className="text-white font-bold text-sm tracking-tight">{item.name}</div>
           <div className="text-blue-400 text-xs font-medium uppercase tracking-wider mt-0.5">{item.role}</div>
@@ -160,7 +145,7 @@ export default function TestimonialMarquee() {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ delay: 0.2 }}
-           className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light"
+           className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-medium"
         >
           Join thousands of businesses operating at maximum efficiency with our blazing fast infrastructure.
         </motion.p>

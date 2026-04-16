@@ -39,11 +39,11 @@ export default function SaaSBanner() {
                          initial={{ opacity: 0, y: 20 }}
                          animate={{ opacity: 1, y: 0 }}
                          transition={{ duration: 0.5 }}
-                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10 "
+                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10 "
                        >
                          <span className="relative flex h-2 w-2">
-                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                           <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                           <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
                          </span>
                          All-in-One Billing Platform
                        </motion.div>
@@ -53,7 +53,7 @@ export default function SaaSBanner() {
                 <span className="text-blue-200">Anywhere</span>
               </h2>
 
-              <p className="text-blue-100/80 text-base md:text-lg font-light leading-relaxed mb-8 max-w-md">
+              <p className="text-blue-100/80 text-base md:text-lg font-medium leading-relaxed mb-8 max-w-md">
 Simplify GST billing, manage inventory, and track your business performance in real time — all from one powerful platform              </p>
 
               <div className="flex flex-wrap gap-4">

@@ -66,7 +66,7 @@ export default function MultiUserAccessAnimation() {
             </span>
             Secure & Scalable
           </motion.div>
-           <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-slate-900 mb-10 leading-[1.1] tracking-tighter">
+           <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium  text-slate-900 mb-10 leading-[1.1] tracking-tighter">
               Multi user access <br className="hidden md:block" />
               <span className="text-primary italic">from any devices</span>
            </h2>
@@ -96,7 +96,7 @@ export default function MultiUserAccessAnimation() {
                          transition={{ duration: 0.3 }}
                          className="overflow-hidden"
                        >
-                         <p className="text-slate-600 text-base md:text-lg leading-relaxed font-light pt-2">
+                         <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium pt-2">
                            {tab.desc}
                          </p>
                        </motion.div>

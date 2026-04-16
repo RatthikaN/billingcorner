@@ -2,7 +2,8 @@
 
 import {
   CheckCircle2,
-  ArrowRight
+  ArrowRight,
+  Download
 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import Link from 'next/link';
@@ -56,21 +57,94 @@ export default function Features() {
       </div>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-semibold text-slate-900 mb-8"
-          >
-            Powerful Billing Software Features for <span className="text-primary">Modern Businesses</span>
-          </motion.h1>
-          <p className="text-slate-600 text-xl mb-12">
-            Streamline your operations with our all-in-one billing, inventory, and GST management solution designed for rapid growth and efficiency.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link href="/download" className="btn-primary">Download Billing Corner</Link>
-            <button className="btn-secondary">Watch Demo</button>
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-[#0a0f1d]">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/features_hero_bg_1776316641715.png" 
+            alt="Background" 
+            className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1d]/80 via-transparent to-[#0a0f1d]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1d] via-transparent to-[#0a0f1d]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="text-left">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.3em] mb-8 shadow-xl backdrop-blur-md"
+              >
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                Compliance Made Simple
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white mb-8 tracking-tighter leading-[0.95]"
+              >
+                GST Ready <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 italic">
+                  Billing Engine
+                </span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-slate-400 text-lg md:text-xl mb-12 max-w-xl leading-relaxed font-medium"
+              >
+                Experience the future of business compliance. Our advanced engine simplifies tax logic, automates invoicing, and keeps you ready for every regulatory requirement.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-wrap gap-6"
+              >
+                <Link href="/download" className="px-10 py-5 bg-primary text-white font-bold rounded-2xl flex items-center gap-3 group shadow-2xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+                  Start Free Trial
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link href="/download" className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md">
+                  Book a Demo
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Right Image/Mockup */}
+            <motion.div
+              initial={{ opacity: 0, x: 40, scale: 0.9 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full" />
+              <motion.div
+                animate={{ 
+                  y: [0, -15, 0],
+                }}
+                transition={{ 
+                  duration: 6, 
+                  repeat: Infinity, 
+                  ease: "easeInOut" 
+                }}
+                className="relative z-10"
+              >
+                <img 
+                  src="/images/hero-removebg.png" 
+                  alt="Billing Engine Mockup" 
+                  className="w-full h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]"
+                />
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -89,17 +163,74 @@ export default function Features() {
         </div>
       </section>
 
-      {/* Feature Section with Horizontal Scroll */}
-      <section className="bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 pt-24 text-center">
-          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 mb-4 tracking-tight">
-            Comprehensive <span className="text-primary italic">Features</span> for Your Business
-          </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto text-lg mb-12">
-            Everything you need to manage sales, stock, and compliance.
-          </p>
+      {/* Features Grid */}
+      <section className="bg-slate-50 py-24 px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20 relative">
+                <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10 "
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            The Full Power
+          </motion.div>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-4 tracking-tight">
+              Comprehensive <span className="text-primary italic">Features</span> for Your Business
+            </h2>
+            <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium max-w-2xl mx-auto">
+              Everything you need to manage sales, stock, and compliance in one unified billing platform.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {featureList.map((feature, idx) => (
+              <motion.div
+                key={feature.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -10 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: (idx % 3) * 0.1 }}
+                className="group relative bg-white rounded-[2.5rem] p-8 border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                {/* Decorative background element */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full transform translate-x-8 -translate-y-8" />
+                
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="aspect-[16/10] mb-8 rounded-[1.5rem] overflow-hidden shadow-2xl shadow-black/5">
+                    <img 
+                      src={feature.image} 
+                      alt={feature.title} 
+                      className="w-full h-full object-cover" 
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 className="text-2xl font-normal text-slate-900 mb-4 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-slate-500 leading-relaxed mb-10 font-medium italic grow">
+                    {feature.desc}
+                  </p>
+
+                  <Link 
+                    href={`/features/${feature.id}`}
+                    className="inline-flex items-center gap-3 text-primary font-bold transition-all group/link"
+                  >
+                    Explore Feature
+                    <ArrowRight size={20} className="group-hover/link:translate-x-1" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        <HorizontalFeatureScroll features={featureList} />
       </section>
 
       {/* Detailed Feature Sections */}
@@ -211,7 +342,7 @@ export default function Features() {
               <span className="w-2 h-2 bg-purple-500 rounded-full animate-ping" />
               Compliance Made Simple
             </div>
-            <h2 className="text-4xl md:text-6xl font-semibold mb-8 text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8 text-white leading-tight">
               GST Ready <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-primary">
                 Billing Engine
@@ -231,7 +362,7 @@ export default function Features() {
                     <CheckCircle2 size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white mb-1">{item.title}</h4>
+                    <h4 className="font-normal text-white mb-1">{item.title}</h4>
                     <p className="text-white/40 text-sm">{item.desc}</p>
                   </div>
                 </div>
@@ -347,11 +478,11 @@ export default function Features() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-medium mb-8 text-slate-900 tracking-tight"
+            className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8 tracking-tight"
           >
             Simplify Your Billing Today
           </motion.h2>
-          <p className="text-slate-600 mb-12 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-600 mb-12 text-base font-medium lg:text-xl max-w-2xl mx-auto leading-relaxed">
             Everything you need to manage invoices, customers, and payments in one place.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -362,9 +493,13 @@ export default function Features() {
               Start Free Trial
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            <button className="btn-secondary text-lg px-10 py-5 bg-white/80 hover:bg-white transition-all flex items-center justify-center gap-2">
-              View Demo
-            </button>
+            <Link
+              href="/download"
+              className="btn-secondary text-lg px-10 py-5 bg-white/80 hover:bg-white transition-all flex items-center justify-center gap-2"
+            >
+              {/* <Download size={20} /> */}
+              Book a demo
+            </Link>
           </div>
           <p className="mt-8 text-sm text-slate-400 font-medium">No credit card required. Cancel anytime.</p>
         </motion.div>

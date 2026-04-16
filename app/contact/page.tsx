@@ -24,10 +24,10 @@ export default function Contact() {
     <div className="pb-24">
       <section className="pt-32 pb-24 px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 mb-8">
+          <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8">
             Contact <span className="text-primary">Us</span>
           </h1>
-          <p className="text-slate-600 text-xl">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
             We're here to help with any questions about your billing, subscriptions, or account settings. Reach out and our team will get back to you shortly.
           </p>
         </div>
@@ -36,13 +36,13 @@ export default function Contact() {
       <section className="px-6 mb-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-8">Contact Details</h2>
+            <h2 className="text-2xl font-medium text-slate-900 mb-8">Contact Details</h2>
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm flex items-center gap-6 group hover:border-primary transition-colors">
               <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                 <Mail size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 mb-1">Email Us</h4>
+                <h4 className="font-medium text-slate-900 mb-1">Email Us</h4>
                 <div className="space-y-1">
                   <p className="text-slate-500 text-sm">
                     <span className="font-medium text-slate-700">Sales Enquiry:</span> <a href="mailto:sales@billingcorner.com" className="hover:text-primary transition-colors">sales@billingcorner.com</a>
@@ -58,7 +58,7 @@ export default function Contact() {
                 <Phone size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 mb-1">Call Us</h4>
+                <h4 className="font-medium text-slate-900 mb-1">Call Us</h4>
                 <div className="space-y-1">
                   <p className="text-slate-500 text-sm">
                     <span className="font-medium text-slate-700">Phone:</span> <a href="tel:+918300256356" className="hover:text-primary transition-colors">+91 8300 256 356</a>
@@ -74,7 +74,7 @@ export default function Contact() {
                 <Clock size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 mb-1">Business Hours</h4>
+                <h4 className="font-medium text-slate-900 mb-1">Business Hours</h4>
                 <p className="text-slate-500 text-sm">Mon - Fri, 9 AM - 6 PM</p>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function Contact() {
           </div>
 
           <div className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-2xl">
-            <h2 className="text-2xl font-bold text-slate-900 mb-8">Send us a message</h2>
+            <h2 className="text-2xl font-medium text-slate-900 mb-8">Send us a message</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">

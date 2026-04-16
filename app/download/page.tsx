@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Monitor, Globe, Smartphone, Apple, Play, Download as DownloadIcon, ChevronRight } from 'lucide-react';
+import { Monitor, Globe, Smartphone, Apple, Play, Download as DownloadIcon, ChevronRight, Check, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import Link from 'next/link';
 import FAQ from '@/src/components/FAQ';
 
 const platforms = ['Desktop', 'Mobile', 'Web'];
@@ -33,142 +34,230 @@ export default function Download() {
   }, []);
 
   return (
-    <div className="pb-24">
-      <section className="pt-32 pb-20 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 flex flex-col sm:flex-row items-center whitespace-nowrap justify-center gap-x-4 gap-y-2">
-            <span>Download Billing Corner for</span>
-            <div className="relative h-[1.2em] min-w-[120px] flex items-center justify-center sm:justify-start">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={platforms[index]}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="text-primary block"
-                >
-                  {platforms[index]}
-                </motion.span>
-              </AnimatePresence>
-            </div>
-          </h1>
-          <p className="text-slate-600 text-xl max-w-2xl mx-auto">
-            Experience absolute synchronization. Take control of your business finances on every device you own.
-          </p>
-        </div>
-      </section>
-
-      <section className="px-6 mb-24">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Desktop */}
-          <motion.div
-            whileHover={{ y: -10 }}
-            className="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-xl hover:shadow-2xl transition-all"
-          >
-            <div className="w-20 h-20 bg-primary/5 rounded-[2rem] flex items-center justify-center text-primary mb-8 mx-auto">
-              <Monitor size={40} />
-            </div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Desktop Version</h2>
-            <p className="text-slate-500 text-center mb-10 leading-relaxed">
-              The native power of Billing Corner optimized for your workstation. Available for Windows 10 & 11.
+    <div className="pb-0 bg-slate-50 font-sans">
+      {/* 1. HERO DOWNLOAD SECTION */}
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-indigo-900 via-[#3b2786] to-purple-900">
+        <div className="absolute inset-0 bg-black/20 mix-blend-overlay pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/20 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-lg">
+              Download <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-violet-300">Billing Corner</span>
+            </h1>
+            <p className="text-indigo-100/80 text-lg md:text-xl max-w-2xl mx-auto font-medium">
+              Experience the absolute perfect synergy of features. Take control of your business finances on every device you own, completely synced.
             </p>
-            <ul className="space-y-4 mb-10">
-              <li className="flex items-center gap-3 text-sm text-slate-600">
-                <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                  <ChevronRight size={14} />
-                </div>
-                Latest Version: 2.4.0
-              </li>
-              <li className="flex items-center gap-3 text-sm text-slate-600">
-                <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                  <ChevronRight size={14} />
-                </div>
-                Full offline support
-              </li>
-            </ul>
-            <button className="w-full btn-primary py-4 flex items-center justify-center gap-3">
-              <DownloadIcon size={20} /> Download for Windows
-            </button>
-          </motion.div>
-
-          {/* Web App */}
-          <motion.div
-            whileHover={{ y: -10 }}
-            className="bg-slate-50 p-12 rounded-[3rem] border border-slate-200 shadow-sm hover:shadow-xl transition-all"
-          >
-            <div className="w-20 h-20 bg-primary/5 rounded-[2rem] flex items-center justify-center text-primary mb-8 mx-auto">
-              <Globe size={40} />
-            </div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Web App</h2>
-            <p className="text-slate-500 text-center mb-10 leading-relaxed">
-              Access your dashboard instantly from any modern browser without installing a thing.
-            </p>
-            <ul className="space-y-4 mb-10">
-              <li className="flex items-center gap-3 text-sm text-slate-600">
-                <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                  <ChevronRight size={14} />
-                </div>
-                Always up to date
-              </li>
-              <li className="flex items-center gap-3 text-sm text-slate-600">
-                <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                  <ChevronRight size={14} />
-                </div>
-                Cross-platform compatibility
-              </li>
-            </ul>
-            <button className="w-full btn-secondary py-4 flex items-center justify-center gap-3">
-              <Globe size={20} /> Open Web App
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Mobile Section */}
-      <section className="px-6">
-        <div className="max-w-6xl mx-auto bg-slate-900 rounded-[4rem] p-12 md:p-24 overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-            <svg viewBox="0 0 400 400" className="w-full h-full">
-              <path d="M0 400L400 0H0V400Z" fill="white" />
-            </svg>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Go Mobile</h2>
-              <p className="text-slate-400 text-lg mb-12 leading-relaxed">
-                Keep track of your billings on the go. Get real-time notifications and manage your invoices from anywhere in the world.
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative">
+            {/* Desktop App Card */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              className="relative group bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-[20px] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] overflow-hidden"
+            >
+              {/* Floating UI Elements inside Card (Invoice Preview) */}
+              <div className="absolute -top-6 -right-6 w-40 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 shadow-2xl rotate-12 group-hover:rotate-6 transition-transform duration-500 hidden sm:block">
+                <div className="flex justify-between items-center mb-3">
+                  <div className="w-10 h-2.5 bg-white/30 rounded-full"></div>
+                  <div className="w-5 h-2.5 bg-emerald-400/80 rounded-full"></div>
+                </div>
+                <div className="space-y-1.5 mb-3">
+                  <div className="w-full h-1.5 bg-white/20 rounded-full"></div>
+                  <div className="w-4/5 h-1.5 bg-white/20 rounded-full"></div>
+                  <div className="w-2/3 h-1.5 bg-white/20 rounded-full"></div>
+                </div>
+                <div className="pt-2 border-t border-white/10 space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-[9px] text-white/60 font-semibold tracking-wider">CGST 9%</span>
+                    <span className="text-[10px] text-white font-bold">₹108.00</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-[9px] text-white/60 font-semibold tracking-wider">SGST 9%</span>
+                    <span className="text-[10px] text-white font-bold">₹108.00</span>
+                  </div>
+                  <div className="flex justify-between items-center mt-1 pt-1 border-t border-white/5">
+                    <span className="text-[10px] text-blue-200 font-bold">Total</span>
+                    <span className="text-[11px] text-blue-200 font-black">₹1,416.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-16 h-16 relative z-10 bg-gradient-to-br from-blue-400/20 to-violet-400/20 border border-white/10 rounded-2xl flex items-center justify-center text-blue-200 mb-8 shadow-[0_0_15px_rgba(96,165,250,0.3)]">
+                <Monitor size={32} strokeWidth={1.5} />
+              </div>
+              <h2 className="text-3xl font-black text-white mb-3 tracking-tight">Desktop App</h2>
+              <p className="text-indigo-100/70 mb-8 leading-relaxed font-medium">
+                The native power of Billing Corner optimized for your workstation. Maximum performance, full offline capabilities.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <button className="bg-white text-slate-900 px-6 py-3 rounded-2xl font-bold flex items-center gap-3 hover:bg-slate-100 transition-colors">
-                  <Apple size={24} />
-                  <div className="text-left">
-                    <div className="text-[10px] uppercase tracking-wider opacity-60">Download on the</div>
-                    <div className="text-sm">App Store</div>
+              
+              <ul className="space-y-4 mb-10 text-white/80 font-medium">
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center">
+                    <Check size={14} strokeWidth={3} />
                   </div>
-                </button>
-                <button className="bg-white text-slate-900 px-6 py-3 rounded-2xl font-bold flex items-center gap-3 hover:bg-slate-100 transition-colors">
-                  <Play size={24} />
-                  <div className="text-left">
-                    <div className="text-[10px] uppercase tracking-wider opacity-60">Get it on</div>
-                    <div className="text-sm">Google Play</div>
+                  Available for Windows & macOS
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center">
+                    <Check size={14} strokeWidth={3} />
                   </div>
-                </button>
+                  Instant printer & scanner access 
+                </li>
+              </ul>
+
+              <button className="w-full relative z-10 bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-400 hover:to-violet-400 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all">
+                <DownloadIcon size={20} /> Download Installer
+              </button>
+            </motion.div>
+
+            {/* Web App Card */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              className="relative group bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-[20px] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] overflow-hidden"
+            >
+              {/* Floating UI Elements inside Card (Chart/Stats) */}
+              <div className="absolute -top-6 -right-6 w-40 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 shadow-2xl -rotate-12 group-hover:-rotate-6 transition-transform duration-500 hidden sm:block">
+                <div className="flex justify-between items-end h-16 gap-1 mb-2">
+                  <div className="w-full bg-violet-400/40 rounded-t-sm h-1/3"></div>
+                  <div className="w-full bg-violet-400/60 rounded-t-sm h-3/4"></div>
+                  <div className="w-full bg-violet-400/50 rounded-t-sm h-1/2"></div>
+                  <div className="w-full bg-blue-400/80 rounded-t-sm h-full relative"><div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full shadow-[0_0_5px_white]"></div></div>
+                  <div className="w-full bg-violet-400/30 rounded-t-sm h-2/3"></div>
+                </div>
+                <div className="text-[10px] text-white/80 font-bold tracking-wide">Revenue Analysis</div>
+                <div className="text-[9px] text-emerald-300 font-semibold">+24.5% vs last month</div>
               </div>
+
+              <div className="w-16 h-16 relative z-10 bg-gradient-to-br from-violet-400/20 to-purple-400/20 border border-white/10 rounded-2xl flex items-center justify-center text-violet-200 mb-8 shadow-[0_0_15px_rgba(167,139,250,0.3)]">
+                <Globe size={32} strokeWidth={1.5} />
+              </div>
+              <h2 className="text-3xl font-black text-white mb-3 tracking-tight">Cloud Web App</h2>
+              <p className="text-indigo-100/70 mb-8 leading-relaxed font-medium">
+                Access your dashboard instantly from any modern browser. Fully synced, real-time updates without installing a thing.
+              </p>
+              
+              <ul className="space-y-4 mb-10 text-white/80 font-medium">
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 flex items-center justify-center">
+                    <Check size={14} strokeWidth={3} />
+                  </div>
+                  Always up to date
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 flex items-center justify-center">
+                    <Check size={14} strokeWidth={3} />
+                  </div>
+                  Cross-platform compatibility
+                </li>
+              </ul>
+
+              <a 
+                href="https://app.billingcorner.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full relative z-10 bg-white/10 hover:bg-white/20 border border-white/20 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-colors backdrop-blur-sm"
+              >
+                <Globe size={20} /> Launch Web App
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. MOBILE APP SECTION */}
+      <section className="bg-gradient-to-br from-[#050a15] via-[#0a1128] to-black py-24 md:py-32 px-6 relative overflow-hidden text-white border-y border-white/5">
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-violet-600/10 blur-[150px] rounded-full pointer-events-none"></div>
+        
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+          <div className="order-2 lg:order-1 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-bold uppercase tracking-widest mb-6">
+              <Sparkles size={14} /> Available Now
             </div>
-            <div className="relative">
-              <div className="bg-primary/20 w-80 h-80 rounded-full blur-[100px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-              <div className="relative bg-slate-800 w-64 h-[500px] mx-auto rounded-[3rem] border-[8px] border-slate-700 shadow-2xl overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-700 rounded-b-2xl" />
-                <div className="p-6 pt-12">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mb-6">
-                    <DownloadIcon size={24} />
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900  text-white mb-6 tracking-tight leading-tight">
+              Manage your business <br className="hidden md:block"/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_15px_rgba(96,165,250,0.5)]">on the go.</span>
+            </h2>
+            <p className="text-slate-400 text-lg md:text-xl font-medium mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Experience the futuristic fintech design right in your pocket. Keep track of billing, view insightful dashboards, and manage inventory with absolute precision.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <button className="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-4 transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] group">
+                <Apple size={32} className="group-hover:scale-110 transition-transform" />
+                <div className="text-left">
+                  <div className="text-[10px] uppercase font-bold tracking-widest text-slate-400">Download on the</div>
+                  <div className="text-lg leading-none mt-1">App Store</div>
+                </div>
+              </button>
+              <button className="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-4 transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] group">
+                <Play size={28} className="text-[#00f2fe] group-hover:scale-110 transition-transform" fill="currentColor" />
+                <div className="text-left">
+                  <div className="text-[10px] uppercase font-bold tracking-widest text-slate-400">Get it on</div>
+                  <div className="text-lg leading-none mt-1">Google Play</div>
+                </div>
+              </button>
+            </div>
+          </div>
+          
+          <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent blur-3xl rounded-full"></div>
+            {/* Smartphone Mockup */}
+            <div className="relative w-[280px] sm:w-[320px] h-[600px] sm:h-[650px] bg-slate-900 rounded-[3rem] border-4 sm:border-[8px] border-[#1a2235] shadow-[0_0_50px_rgba(59,130,246,0.3),_inset_0_4px_15px_rgba(0,0,0,0.5)] overflow-hidden">
+              {/* iPhone Hardware details */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-7 bg-[#1a2235] rounded-b-3xl z-30"></div>
+              
+              {/* Glowing Dashboard UI inside Phone */}
+              <div className="relative w-full h-full bg-[#050a15] p-5 pt-14 overflow-hidden">
+                {/* Header */}
+                <div className="flex justify-between items-center mb-8">
+                  <div>
+                    <div className="text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-1">Total Balance</div>
+                    <div className="text-white text-3xl font-black tracking-tight">₹124,500<span className="text-blue-500">.00</span></div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="h-4 bg-slate-700 rounded-full w-3/4" />
-                    <div className="h-4 bg-slate-700 rounded-full w-1/2" />
-                    <div className="h-32 bg-slate-700 rounded-2xl w-full" />
+                  <div className="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                    <Smartphone size={20} />
                   </div>
+                </div>
+
+                {/* Neon Graph Placeholder */}
+                <div className="relative h-32 mb-8 bg-blue-900/10 rounded-2xl border border-blue-500/20 p-4">
+                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-2 h-16">
+                    <div className="w-full bg-blue-500/20 rounded-t-sm h-1/3"></div>
+                    <div className="w-full bg-blue-500/40 rounded-t-sm h-2/3"></div>
+                    <div className="w-full bg-blue-500/70 rounded-t-sm h-full relative shadow-[0_0_10px_rgba(59,130,246,0.8)]"><div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full"></div></div>
+                    <div className="w-full bg-blue-500/50 rounded-t-sm h-3/4"></div>
+                    <div className="w-full bg-blue-500/30 rounded-t-sm h-1/2"></div>
+                  </div>
+                </div>
+
+                {/* Recent Invoices List */}
+                <div className="space-y-3">
+                  <div className="text-white text-sm font-bold mb-4">Recent Transactions</div>
+                  {[1, 2, 3].map((_, i) => (
+                    <div key={i} className="flex justify-between items-center p-3 rounded-xl bg-white/5 border border-white/5 backdrop-blur-md">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-violet-500/20 flex items-center justify-center text-violet-300">
+                           <div className="w-3 h-3 bg-violet-400 rounded-sm"></div>
+                        </div>
+                        <div>
+                          <div className="text-white text-xs font-bold">INV-2026-00{i+1}</div>
+                          <div className="text-slate-500 text-[10px]">Today, 10:4{i} AM</div>
+                        </div>
+                      </div>
+                      <div className="text-emerald-400 text-xs font-black">+₹{50 * (i+1)}.00</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Nav */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-[#0a1128]/90 backdrop-blur-xl border-t border-white/10 flex justify-around items-center px-6 pb-2">
+                   <div className="relative w-10 h-10 flex items-center justify-center">
+                     <div className="absolute top-0 w-8 h-1 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+                     <div className="w-5 h-5 bg-blue-400 rounded-sm mt-1"></div>
+                   </div>
+                   <div className="w-5 h-5 bg-slate-600 rounded-sm mt-1"></div>
+                   <div className="w-5 h-5 bg-slate-600 rounded-sm mt-1"></div>
                 </div>
               </div>
             </div>
@@ -176,13 +265,15 @@ export default function Download() {
         </div>
       </section>
 
-      <section className="pt-24 px-6 text-center pb-24">
-        <p className="text-slate-400 text-sm">
-          Need help with installation? <a href="#" className="text-primary hover:underline">Read the setup guide</a> or <a href="#" className="text-primary hover:underline">Contact Support</a>.
+      <section className="pt-24 px-6 text-center pb-24 border-t border-slate-200">
+        <p className="text-slate-500 text-base font-medium">
+          Need help with installation? <Link href="/contact" className="text-primary hover:underline font-bold">Click here</Link> or <Link href="/contact" className="text-primary hover:underline font-bold">Contact Support</Link>.
         </p>
       </section>
 
-      <FAQ customFaqs={downloadFaqs} title="Download FAQ" />
+      <div className="bg-white">
+        <FAQ customFaqs={downloadFaqs} title="Download FAQ" />
+      </div>
     </div>
   );
 }

@@ -61,27 +61,27 @@ export default function PricingComparison() {
         <span className="inline-block py-1.5 px-4 rounded-full bg-slate-100 text-slate-800 font-black text-[11px] uppercase tracking-widest mb-4">
           Why We Are Different
         </span>
-        <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+        <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 tracking-tight">
           How We Stack <span className="text-primary italic">Up</span>
         </h2>
       </motion.div>
 
       {/* The Wrapper for Horizontal Scroll */}
       <div className="relative rounded-[2.5rem] border-[3px] border-slate-900/5 bg-white shadow-2xl overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-transparent before:to-white/50 before:pointer-events-none before:z-20">
-        <div className="overflow-x-auto snap-x snap-mandatory hide-scrollbar relative z-10 p-2 sm:p-4">
-          <table className="w-full text-left border-collapse min-w-[700px]">
+        <div className="overflow-auto max-h-[700px] snap-x snap-mandatory no-scrollbar relative z-10">
+          <table className="w-full text-left border-separate border-spacing-0 min-w-[700px]">
             <thead>
               <tr>
-                {/* Static Heading Column */}
-                <th className="sticky left-0 bg-white z-30 p-6 md:p-8 min-w-[200px] w-1/3 shadow-[15px_0_20px_-15px_rgba(0,0,0,0.08)] align-bottom">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 leading-none">
+                {/* Static Heading Column - Now sticky both top and left with a visual boundary shadow */}
+                <th className="sticky top-0 left-0 bg-white z-50 p-6 md:p-8 min-w-[200px] w-1/3 shadow-[15px_0_20px_-15px_rgba(0,0,0,0.08),0_15px_20px_-15px_rgba(0,0,0,0.1)] align-bottom border-b border-slate-100">
+                  <h3 className="text-2xl md:text-3xl font-medium text-slate-600 leading-none">
                     Features
                   </h3>
                   <div className="h-1 w-12 bg-slate-200 mt-4 rounded-full"></div>
                 </th>
 
-                {/* Swipeable Columns */}
-                <th className="p-6 md:p-8 snap-center w-1/3 align-bottom">
+                {/* Swipeable Columns - Now sticky top with boundary shadow */}
+                <th className="sticky top-0 bg-white z-40 p-6 md:p-8 snap-center w-1/3 align-bottom border-b border-slate-100 shadow-[0_15px_20px_-15px_rgba(0,0,0,0.1)]">
                   <div className="text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-100 text-slate-400 mb-4">
                       <X size={24} strokeWidth={3} />
@@ -92,7 +92,7 @@ export default function PricingComparison() {
                   </div>
                 </th>
 
-                <th className="p-6 md:p-8 snap-center w-1/3 align-bottom">
+                <th className="sticky top-0 bg-white z-40 p-6 md:p-8 snap-center w-1/3 align-bottom border-b border-slate-100 shadow-[0_15px_20px_-15px_rgba(0,0,0,0.1)]">
                   <div className="relative p-6 rounded-3xl bg-gradient-to-b from-primary/10 to-transparent border border-primary/20 text-center shadow-[0_0_40px_-10px_rgba(0,0,0,0.1)]">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-amber-500 text-white text-[10px] uppercase font-black tracking-widest px-4 py-1 rounded-full shadow-lg flex items-center gap-1 whitespace-nowrap">
                       <Sparkles size={12} fill="white" /> Top Choice
@@ -113,7 +113,7 @@ export default function PricingComparison() {
                   }`}
                 >
                   {/* Static Left Column */}
-                  <td className="sticky left-0 bg-white z-20 p-6 md:p-8 font-black text-slate-700 shadow-[15px_0_20px_-15px_rgba(0,0,0,0.08)] group-hover:bg-slate-50/80 transition-colors">
+                  <td className="sticky left-0 bg-white z-30 p-6 md:p-8 font-black text-slate-700 shadow-[15px_0_20px_-15px_rgba(0,0,0,0.08)] group-hover:bg-slate-50/80 transition-colors">
                     {row.feature}
                   </td>
 

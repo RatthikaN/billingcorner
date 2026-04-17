@@ -42,7 +42,7 @@ export default function Download() {
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-lg">
+            <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 text-white mb-6 tracking-tight drop-shadow-lg">
               Download <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-violet-300">Billing Corner</span>
             </h1>
             <p className="text-indigo-100/80 text-lg md:text-xl max-w-2xl mx-auto font-medium">
@@ -86,7 +86,7 @@ export default function Download() {
               <div className="w-16 h-16 relative z-10 bg-gradient-to-br from-blue-400/20 to-violet-400/20 border border-white/10 rounded-2xl flex items-center justify-center text-blue-200 mb-8 shadow-[0_0_15px_rgba(96,165,250,0.3)]">
                 <Monitor size={32} strokeWidth={1.5} />
               </div>
-              <h2 className="text-3xl font-black text-white mb-3 tracking-tight">Desktop App</h2>
+              <h2 className="text-2xl md:text-3xl font-medium text-slate-900 text-white mb-3 tracking-tight">Desktop App</h2>
               <p className="text-indigo-100/70 mb-8 leading-relaxed font-medium">
                 The native power of Billing Corner optimized for your workstation. Maximum performance, full offline capabilities.
               </p>
@@ -132,7 +132,7 @@ export default function Download() {
               <div className="w-16 h-16 relative z-10 bg-gradient-to-br from-violet-400/20 to-purple-400/20 border border-white/10 rounded-2xl flex items-center justify-center text-violet-200 mb-8 shadow-[0_0_15px_rgba(167,139,250,0.3)]">
                 <Globe size={32} strokeWidth={1.5} />
               </div>
-              <h2 className="text-3xl font-black text-white mb-3 tracking-tight">Cloud Web App</h2>
+              <h2 className="text-2xl md:text-3xl font-medium text-slate-900 text-white mb-3 tracking-tight">Cloud Web App</h2>
               <p className="text-indigo-100/70 mb-8 leading-relaxed font-medium">
                 Access your dashboard instantly from any modern browser. Fully synced, real-time updates without installing a thing.
               </p>
@@ -172,9 +172,18 @@ export default function Download() {
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
           <div className="order-2 lg:order-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-bold uppercase tracking-widest mb-6">
-              <Sparkles size={14} /> Available Now
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              Available Now
+            </motion.div>
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900  text-white mb-6 tracking-tight leading-tight">
               Manage your business <br className="hidden md:block"/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_15px_rgba(96,165,250,0.5)]">on the go.</span>
@@ -203,64 +212,17 @@ export default function Download() {
           <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end">
             <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent blur-3xl rounded-full"></div>
             {/* Smartphone Mockup */}
-            <div className="relative w-[280px] sm:w-[320px] h-[600px] sm:h-[650px] bg-slate-900 rounded-[3rem] border-4 sm:border-[8px] border-[#1a2235] shadow-[0_0_50px_rgba(59,130,246,0.3),_inset_0_4px_15px_rgba(0,0,0,0.5)] overflow-hidden">
-              {/* iPhone Hardware details */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-7 bg-[#1a2235] rounded-b-3xl z-30"></div>
-              
-              {/* Glowing Dashboard UI inside Phone */}
-              <div className="relative w-full h-full bg-[#050a15] p-5 pt-14 overflow-hidden">
-                {/* Header */}
-                <div className="flex justify-between items-center mb-8">
-                  <div>
-                    <div className="text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-1">Total Balance</div>
-                    <div className="text-white text-3xl font-black tracking-tight">₹124,500<span className="text-blue-500">.00</span></div>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    <Smartphone size={20} />
-                  </div>
-                </div>
-
-                {/* Neon Graph Placeholder */}
-                <div className="relative h-32 mb-8 bg-blue-900/10 rounded-2xl border border-blue-500/20 p-4">
-                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-2 h-16">
-                    <div className="w-full bg-blue-500/20 rounded-t-sm h-1/3"></div>
-                    <div className="w-full bg-blue-500/40 rounded-t-sm h-2/3"></div>
-                    <div className="w-full bg-blue-500/70 rounded-t-sm h-full relative shadow-[0_0_10px_rgba(59,130,246,0.8)]"><div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full"></div></div>
-                    <div className="w-full bg-blue-500/50 rounded-t-sm h-3/4"></div>
-                    <div className="w-full bg-blue-500/30 rounded-t-sm h-1/2"></div>
-                  </div>
-                </div>
-
-                {/* Recent Invoices List */}
-                <div className="space-y-3">
-                  <div className="text-white text-sm font-bold mb-4">Recent Transactions</div>
-                  {[1, 2, 3].map((_, i) => (
-                    <div key={i} className="flex justify-between items-center p-3 rounded-xl bg-white/5 border border-white/5 backdrop-blur-md">
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-violet-500/20 flex items-center justify-center text-violet-300">
-                           <div className="w-3 h-3 bg-violet-400 rounded-sm"></div>
-                        </div>
-                        <div>
-                          <div className="text-white text-xs font-bold">INV-2026-00{i+1}</div>
-                          <div className="text-slate-500 text-[10px]">Today, 10:4{i} AM</div>
-                        </div>
-                      </div>
-                      <div className="text-emerald-400 text-xs font-black">+₹{50 * (i+1)}.00</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Bottom Nav */}
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-[#0a1128]/90 backdrop-blur-xl border-t border-white/10 flex justify-around items-center px-6 pb-2">
-                   <div className="relative w-10 h-10 flex items-center justify-center">
-                     <div className="absolute top-0 w-8 h-1 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
-                     <div className="w-5 h-5 bg-blue-400 rounded-sm mt-1"></div>
-                   </div>
-                   <div className="w-5 h-5 bg-slate-600 rounded-sm mt-1"></div>
-                   <div className="w-5 h-5 bg-slate-600 rounded-sm mt-1"></div>
-                </div>
-              </div>
-            </div>
+            <motion.div 
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+              className="relative w-[320px] sm:w-[500px] max-w-full flex items-center justify-center z-10"
+            >
+              <img 
+                src="/smartphone_mockup-removebg-preview.png" 
+                alt="Billing Corner Mobile Dashboard" 
+                className="w-full h-auto drop-shadow-[0_20px_50px_rgba(59,130,246,0.5)] scale-110"
+              />
+            </motion.div>
           </div>
         </div>
       </section>

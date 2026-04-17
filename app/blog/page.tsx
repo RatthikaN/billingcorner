@@ -14,11 +14,11 @@ export default function BlogListing() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-semibold text-slate-900 mb-8"
+            className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8"
           >
             Billing Corner <span className="text-primary">Blog</span>
           </motion.h1>
-          <p className="text-slate-600 text-xl max-w-2xl mx-auto">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium max-w-2xl mx-auto">
             Expert insights, business strategies, and product updates to help you grow your business and master billing efficiency.
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function BlogListing() {
                   </div>
 
                   <Link href={`/blog/${post.slug}`}>
-                    <h2 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors line-clamp-2">
+                    <h2 className="text-xl md:text-2xl font-medium text-slate-900 mb-4 group-hover:text-primary transition-colors line-clamp-2">
                       {post.title}
                     </h2>
                   </Link>

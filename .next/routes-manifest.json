@@ -1,1 +1,293 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/","destination":"/:file","permanent":true,"internal":true,"missing":[{"type":"header","key":"x-nextjs-data"}],"regex":"^(?:\\/((?!\\.well-known(?:\\/.*)?)(?:[^/]+\\/)*[^/]+\\.\\w+))\\/$"},{"source":"/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)","destination":"/:notfile/","permanent":true,"internal":true,"regex":"^(?:\\/((?!\\.well-known(?:\\/.*)?)(?:[^/]+\\/)*[^/\\.]+))$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
+      "destination": "/:file",
+      "internal": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-nextjs-data"
+        }
+      ],
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+    },
+    {
+      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
+      "destination": "/:notfile/",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/blog/[slug]",
+      "regex": "^/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/features/[id]",
+      "regex": "^/features/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/features/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/become-a-dealer",
+      "regex": "^/become\\-a\\-dealer(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/become\\-a\\-dealer(?:/)?$"
+    },
+    {
+      "page": "/become-a-dealer/join",
+      "regex": "^/become\\-a\\-dealer/join(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/become\\-a\\-dealer/join(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/clothing-and-apparel",
+      "regex": "^/clothing\\-and\\-apparel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/clothing\\-and\\-apparel(?:/)?$"
+    },
+    {
+      "page": "/cloud-dashboard",
+      "regex": "^/cloud\\-dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cloud\\-dashboard(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/cookie-policy",
+      "regex": "^/cookie\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cookie\\-policy(?:/)?$"
+    },
+    {
+      "page": "/desktop-billing",
+      "regex": "^/desktop\\-billing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/desktop\\-billing(?:/)?$"
+    },
+    {
+      "page": "/download",
+      "regex": "^/download(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/download(?:/)?$"
+    },
+    {
+      "page": "/electronics-and-mobile-shops",
+      "regex": "^/electronics\\-and\\-mobile\\-shops(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/electronics\\-and\\-mobile\\-shops(?:/)?$"
+    },
+    {
+      "page": "/faq",
+      "regex": "^/faq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/faq(?:/)?$"
+    },
+    {
+      "page": "/features",
+      "regex": "^/features(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features(?:/)?$"
+    },
+    {
+      "page": "/fresh-produce-stores",
+      "regex": "^/fresh\\-produce\\-stores(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fresh\\-produce\\-stores(?:/)?$"
+    },
+    {
+      "page": "/gdpr-policy",
+      "regex": "^/gdpr\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/gdpr\\-policy(?:/)?$"
+    },
+    {
+      "page": "/mobile-app",
+      "regex": "^/mobile\\-app(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mobile\\-app(?:/)?$"
+    },
+    {
+      "page": "/pharmacy-and-healthcare",
+      "regex": "^/pharmacy\\-and\\-healthcare(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pharmacy\\-and\\-healthcare(?:/)?$"
+    },
+    {
+      "page": "/pricing",
+      "regex": "^/pricing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pricing(?:/)?$"
+    },
+    {
+      "page": "/privacy-policy",
+      "regex": "^/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/products/cloud",
+      "regex": "^/products/cloud(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/cloud(?:/)?$"
+    },
+    {
+      "page": "/products/desktop",
+      "regex": "^/products/desktop(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/desktop(?:/)?$"
+    },
+    {
+      "page": "/products/ecommerce",
+      "regex": "^/products/ecommerce(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/ecommerce(?:/)?$"
+    },
+    {
+      "page": "/products/inventory",
+      "regex": "^/products/inventory(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/inventory(?:/)?$"
+    },
+    {
+      "page": "/products/mobile",
+      "regex": "^/products/mobile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/mobile(?:/)?$"
+    },
+    {
+      "page": "/refund-policy",
+      "regex": "^/refund\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/refund\\-policy(?:/)?$"
+    },
+    {
+      "page": "/restaurants-and-cafes",
+      "regex": "^/restaurants\\-and\\-cafes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/restaurants\\-and\\-cafes(?:/)?$"
+    },
+    {
+      "page": "/retail-and-supermarkets",
+      "regex": "^/retail\\-and\\-supermarkets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/retail\\-and\\-supermarkets(?:/)?$"
+    },
+    {
+      "page": "/setup-guide",
+      "regex": "^/setup\\-guide(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setup\\-guide(?:/)?$"
+    },
+    {
+      "page": "/solutions/apparel",
+      "regex": "^/solutions/apparel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/solutions/apparel(?:/)?$"
+    },
+    {
+      "page": "/solutions/electronics",
+      "regex": "^/solutions/electronics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/solutions/electronics(?:/)?$"
+    },
+    {
+      "page": "/solutions/fresh-produce",
+      "regex": "^/solutions/fresh\\-produce(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/solutions/fresh\\-produce(?:/)?$"
+    },
+    {
+      "page": "/solutions/pharmacy",
+      "regex": "^/solutions/pharmacy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/solutions/pharmacy(?:/)?$"
+    },
+    {
+      "page": "/solutions/restaurants",
+      "regex": "^/solutions/restaurants(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/solutions/restaurants(?:/)?$"
+    },
+    {
+      "page": "/solutions/retail",
+      "regex": "^/solutions/retail(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/solutions/retail(?:/)?$"
+    },
+    {
+      "page": "/terms-and-conditions",
+      "regex": "^/terms\\-and\\-conditions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms\\-and\\-conditions(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

@@ -14,7 +14,7 @@ export default function RefundPage() {
 
         <section className="mt-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b pb-2">2. Refund Eligibility</h2>
-          <p>Billing Corner offers a 7-day money-back guarantee for new annual subscription plans. If you are not satisfied with our service within the first 7 days, you may request a full refund.</p>
+          <p>Billing Corner, a brand of Codingrim Technology Solutions Private Limited, offers a 7-day money-back guarantee for new annual subscription plans. If you are not satisfied with our service within the first 7 days, you may request a full refund.</p>
         </section>
 
         <section className="mt-8">

@@ -14,7 +14,7 @@ export default function CookiePage() {
 
         <section className="mt-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b pb-2">2. How We Use Cookies</h2>
-          <p>Billing Corner uses cookies for:</p>
+          <p>Billing Corner, a brand of Codingrim Technology Solutions Private Limited, uses cookies for:</p>
           <ul className="list-disc ml-6 mt-2 space-y-2">
             <li><strong>Essential Cookies:</strong> Required for the platform to function correctly and for secure login.</li>
             <li><strong>Analytical Cookies:</strong> To understand how users interact with our site and improve performance.</li>

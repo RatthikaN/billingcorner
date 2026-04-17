@@ -2,18 +2,19 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'motion/react';
-import { 
-  Briefcase, 
-  TrendingUp, 
-  Users, 
-  GraduationCap, 
-  CheckCircle2, 
-  ArrowRight, 
-  Crown, 
-  History, 
-  Globe, 
-  ShieldCheck, 
+import {
+  Briefcase,
+  TrendingUp,
+  Users,
+  GraduationCap,
+  CheckCircle2,
+  ArrowRight,
+  Crown,
+  History,
+  Globe,
+  ShieldCheck,
   Zap,
   Calculator,
   Calendar,
@@ -64,6 +65,20 @@ const benefits = [
     color: "text-blue-500",
     bg: "bg-blue-500/10"
   },
+  {
+    title: "100% Free to Join",
+    description: "Start your dealership journey today with absolutely zero onboarding or hidden fees.",
+    icon: CheckCircle2,
+    color: "text-emerald-500",
+    bg: "bg-emerald-500/10"
+  },
+  {
+    title: "Earn Up to 50%",
+    description: "Scale your business and unlock higher commission tiers up to 50% based on your sales volume.",
+    icon: TrendingUp,
+    color: "text-amber-500",
+    bg: "bg-amber-500/10"
+  }
 ];
 
 const projectionsPlan1 = [
@@ -97,45 +112,49 @@ export default function BecomeDealer() {
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans overflow-x-hidden">
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-slate-100">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -mr-96 -mt-96 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[100px] -ml-72 -mb-72 pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            
+
             {/* Left Content */}
             <div className="w-full lg:w-1/2 text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em] mb-8"
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10"
               >
-                <Crown size={14} className="text-primary animate-pulse" />
-                Join the Elite Circle
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Become a Dealer
               </motion.div>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter leading-tight"
+                className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900  mb-8 tracking-tighter leading-tight"
               >
                 Become a <span className="text-primary italic">Dealer</span> – <br />
                 Billing Corner
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-xl md:text-2xl text-slate-600 mb-12 font-light leading-relaxed"
+                className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-12"
               >
                 Unlock lifetime earnings with our <span className="text-slate-900 font-medium italic underline decoration-primary/30">Lifetime Benefits Scheme.</span> Reach 1000 dealers and build your scalable income stream today.
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -159,10 +178,13 @@ export default function BecomeDealer() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-indigo-500/20 rounded-[3rem] blur-3xl opacity-50" />
-                <img 
-                  src="/become_dealer.png" 
-                  alt="Become a Dealer Platform" 
+                <div className="absolute inset-0  rounded-[3rem] blur-3xl opacity-50" />
+                <Image
+                  src="/dashborad_bC.jpeg"
+                  alt="Become a Dealer Platform"
+                  width={1200}
+                  height={800}
+                  priority
                   className="w-full h-auto object-cover relative z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-700 rounded-[2rem]"
                 />
               </motion.div>
@@ -176,9 +198,9 @@ export default function BecomeDealer() {
       <section className="py-24 px-6 bg-white relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Why Become a Dealer?</h2>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 tracking-tight mb-6">Why Become a Dealer?</h2>
           </div>
-          
+
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 space-y-8">
               <motion.div
@@ -186,13 +208,13 @@ export default function BecomeDealer() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 leading-tight">
+                <h3 className="text-xl md:text-2xl font-medium text-slate-900 tracking-tight mb-4 leading-tight">
                   Unbeatable <span className="text-primary italic">40% Flat Commission</span>
                 </h3>
-                <p className="text-slate-600 text-lg text-left leading-relaxed font-light">
+                <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-12">
                   We reward our partners with a flat 40% commission on every sale for the first 1,000 dealers.
                   No quotas, no hidden charges—just complete transparency and real earnings.
-                  Build a strong, recurring income stream with us.                
+                  Build a strong, recurring income stream with us.
                 </p>
               </motion.div>
 
@@ -209,13 +231,13 @@ export default function BecomeDealer() {
                     <benefit.icon size={28} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-medium text-slate-900 mb-2">{benefit.title}</h3>
                     <p className="text-slate-500 leading-relaxed font-light">{benefit.description}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
-            
+
             <div className="w-full lg:w-1/2">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -224,9 +246,9 @@ export default function BecomeDealer() {
                 className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent pointer-events-none" />
-                <img 
-                  src="/flat_billing.png" 
-                  alt="Flat Billing Commission" 
+                <img
+                  src="/flat.png"
+                  alt="Flat Billing Commission"
                   className="w-full h-auto object-cover relative z-10"
                 />
               </motion.div>
@@ -239,10 +261,10 @@ export default function BecomeDealer() {
       <section className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6"> Our Customer Plans</h2>
-            <p className="text-slate-500 text-lg">Transparent pricing built for maximum dealer profitability.</p>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 tracking-tight mb-6"> Our Customer Plans</h2>
+            <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">Transparent pricing built for maximum dealer profitability.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {plans.map((plan, idx) => (
               <motion.div
@@ -262,38 +284,38 @@ export default function BecomeDealer() {
                 </div>
 
                 <div className="relative z-10">
-                  <span className={`inline-block px-4 py-1.5 rounded-full ${plan.metal === 'gold' ? 'bg-amber-50 text-amber-600 border border-amber-200' : 'bg-slate-50 text-slate-600 border border-slate-200'} text-[10px] font-bold uppercase tracking-widest mb-6`}>
+                  <span className={`inline-block px-4 py-1.5 rounded-full ${plan.metal === 'gold' ? 'bg-amber-50 text-amber-600 border border-amber-200' : 'bg-slate-50 text-slate-600 border border-slate-200'} text-[9px] font-bold uppercase tracking-widest mb-4`}>
                     {plan.tag}
                   </span>
-                  <h3 className="text-3xl font-black mb-2 tracking-tight text-slate-900">{plan.name}</h3>
+                  <h3 className="text-2xl font-medium mb-2 tracking-tight text-slate-900">{plan.name}</h3>
                   <div className="flex flex-col gap-1 mb-6">
                     <div className="flex items-center gap-2">
-                       <span className="text-xl font-semibold line-through text-slate-400">₹{plan.mrp}</span>
-                       <span className={`text-[10px] font-black px-2 py-0.5 rounded-md ${plan.metal === 'gold' ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-700'}`}>Save {plan.discountPercent}%</span>
+                      <span className="text-lg font-semibold line-through text-slate-400">₹{plan.mrp}</span>
+                      <span className={`text-[9px] font-black px-2 py-0.5 rounded-md ${plan.metal === 'gold' ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-700'}`}>Save {plan.discountPercent}%</span>
                     </div>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-6xl font-black tracking-tighter text-slate-900">{plan.price}</span>
-                      <span className="text-slate-500 font-bold">/ year</span>
+                      <span className="text-4xl lg:text-5xl font-semibold tracking-tighter text-slate-900">{plan.price}</span>
+                      <span className="text-sm text-slate-500 font-bold">/ year</span>
                     </div>
-                    <p className="text-slate-500 font-bold">{plan.gst}</p>
+                    <p className="text-sm text-slate-500 font-bold">{plan.gst}</p>
                   </div>
-                  
-                  <div className="space-y-4 mb-12">
+
+                  <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3">
                       <div className={`p-1 rounded-full ${plan.metal === 'gold' ? 'bg-amber-500/10 text-amber-600' : 'bg-slate-500/10 text-slate-600'}`}>
-                        <CheckCircle2 size={18} strokeWidth={3} />
+                        <CheckCircle2 size={16} strokeWidth={3} />
                       </div>
-                      <span className="font-bold text-slate-900">Full Software Access</span>
+                      <span className="text-sm font-bold text-slate-900">Full Software Access</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className={`p-1 rounded-full ${plan.metal === 'gold' ? 'bg-amber-500/10 text-amber-600' : 'bg-slate-500/10 text-slate-600'}`}>
-                        <CheckCircle2 size={18} strokeWidth={3} />
+                        <CheckCircle2 size={16} strokeWidth={3} />
                       </div>
-                      <span className="font-bold text-slate-900">Automatic Updates</span>
+                      <span className="text-sm font-bold text-slate-900">Automatic Updates</span>
                     </div>
                   </div>
-                  
-                  <Link href="/become-a-dealer/join" className={`w-full py-5 rounded-2xl text-white font-black transition-all block text-center active:scale-95 shadow-lg ${plan.metal === 'gold' ? 'bg-amber-500 hover:bg-amber-600 shadow-amber-200' : 'bg-slate-800 hover:bg-slate-900 shadow-slate-200'}`}>
+
+                  <Link href="/become-a-dealer/join" className={`w-full py-4 text-sm rounded-xl text-white font-medium transition-all block text-center active:scale-95 shadow-lg ${plan.metal === 'gold' ? 'bg-slate-800 hover:bg-slate-900 shadow-slate-200' : 'bg-slate-800 hover:bg-slate-900 shadow-slate-200'}`}>
                     Select This Plan
                   </Link>
                 </div>
@@ -315,15 +337,39 @@ export default function BecomeDealer() {
               <motion.h2
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="text-4xl md:text-5xl font-bold tracking-tight mb-8"
+                className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 tracking-tight mb-8"
               >
-                 How Your <br />
+                How Your <br />
                 <span className="text-primary italic">Earnings Work</span>
               </motion.h2>
-              <p className="text-xl text-slate-600 mb-12 font-light leading-relaxed">
-                We believe in complete transparency. Here's exactly how much you earn for every single sale of <span className="font-bold text-slate-900">Plan 1 (₹499)</span>.
+              <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-8">
+                We believe in complete transparency. Here's exactly how much you earn for every single sale of <span className="font-bold text-slate-900">{activePlan === 'plan1' ? 'Plan A (₹499)' : 'Plan B (₹1499)'}</span>.
               </p>
-              
+
+              <div className="flex mb-8">
+                <div className="bg-slate-100 p-1.5 rounded-2xl inline-flex relative shadow-inner">
+                  <button
+                    onClick={() => setActivePlan('plan1')}
+                    className={`relative z-10 px-5 py-2 rounded-xl font-bold transition-all duration-300 ${activePlan === 'plan1' ? 'text-white' : 'text-slate-600 hover:text-slate-900'}`}
+                  >
+                    Plan A
+                  </button>
+                  <button
+                    onClick={() => setActivePlan('plan2')}
+                    className={`relative z-10 px-5 py-2 rounded-xl font-bold transition-all duration-300 ${activePlan === 'plan2' ? 'text-white' : 'text-slate-600 hover:text-slate-900'}`}
+                  >
+                    Plan B
+                  </button>
+                  <div
+                    className="absolute inset-y-1.5 w-1/2 bg-primary rounded-xl transition-all duration-300 shadow-md"
+                    style={{
+                      left: activePlan === 'plan1' ? '0.375rem' : 'calc(50% - 0.375rem)',
+                      width: 'calc(50% - 0.375rem)'
+                    }}
+                  />
+                </div>
+              </div>
+
               <div className="space-y-6">
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -335,10 +381,10 @@ export default function BecomeDealer() {
                   </div>
                   <div className="flex-1">
                     <p className="text-slate-500 text-sm font-medium uppercase tracking-wider mb-1">PG Charges (2.95%)</p>
-                    <p className="text-xl font-bold">₹14.72 Deducted</p>
+                    <p className="text-xl font-bold">₹{activePlan === 'plan1' ? '14.72' : '44.22'} Deducted</p>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -350,29 +396,29 @@ export default function BecomeDealer() {
                   </div>
                   <div className="flex-1">
                     <p className="text-slate-500 text-sm font-medium uppercase tracking-wider mb-1">Net Amount</p>
-                    <p className="text-xl font-bold text-emerald-600">₹484.28</p>
+                    <p className="text-xl font-bold text-emerald-600">₹{activePlan === 'plan1' ? '484.28' : '1,454.78'}</p>
                   </div>
                 </motion.div>
               </div>
             </div>
-            
+
             <div className="w-full lg:w-1/2 relative">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="glass-card-dark p-12 rounded-[3rem] text-white overflow-hidden relative"
+                className="bg-[#0f172a] backdrop-blur-xl border border-white/10 shadow-2xl p-12 rounded-[3rem] text-white overflow-hidden relative"
               >
-                <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary/30 rounded-full blur-[80px]" />
+                <div className="absolute -top-20 -right-20 w-80 h-80  rounded-full blur-[80px]" />
                 <div className="relative z-10">
                   <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-primary-foreground text-[10px] font-bold uppercase tracking-widest mb-10">
                     Your Share
                   </div>
                   <h3 className="text-3xl font-bold mb-4">Flat 40% Commission</h3>
                   <div className="text-7xl font-bold mb-6 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-primary/50 to-indigo-300">
-                    ₹193.71
+                    ₹{activePlan === 'plan1' ? '193.71' : '581.91'}
                   </div>
                   <p className="text-white/60 text-lg font-light leading-relaxed">
-                    Per every single sale made on Plan 1. No hidden deductions, no fine print. Pure profit in your pocket.
+                    Per every single sale made on {activePlan === 'plan1' ? 'Plan A' : 'Plan B'}. No hidden deductions, no fine print. Pure profit in your pocket.
                   </p>
                 </div>
               </motion.div>
@@ -389,10 +435,10 @@ export default function BecomeDealer() {
       <section className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Potential Earnings</h2>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 tracking-tight mb-6">Potential Earnings</h2>
             <p className="text-slate-500 text-lg">Daily, Monthly & Yearly Income Projection for {activePlan === 'plan1' ? 'Plan A' : 'Plan B'}</p>
           </div>
-          
+
           <div className="flex justify-center mb-8">
             <div className="bg-slate-100 p-1.5 rounded-2xl inline-flex relative shadow-inner">
               <button
@@ -407,9 +453,9 @@ export default function BecomeDealer() {
               >
                 Plan B (₹1499)
               </button>
-              <div 
+              <div
                 className="absolute inset-y-1.5 w-1/2 bg-primary rounded-xl transition-all duration-300 shadow-md"
-                style={{ 
+                style={{
                   left: activePlan === 'plan1' ? '0.375rem' : 'calc(50% - 0.375rem)',
                   width: 'calc(50% - 0.375rem)'
                 }}
@@ -447,9 +493,9 @@ export default function BecomeDealer() {
               </tbody>
             </table>
           </div>
-          
+
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               className="p-8 rounded-[2.5rem] bg-emerald-50 border border-emerald-100 flex items-center gap-6"
@@ -462,8 +508,8 @@ export default function BecomeDealer() {
                 <p className="text-emerald-700/60 font-medium">Build consistency, earn more.</p>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -478,12 +524,12 @@ export default function BecomeDealer() {
               </div>
             </motion.div>
           </div>
-          
+{/* 
           <div className="mt-12 text-center p-8 bg-slate-900 rounded-[2.5rem] text-white">
             <p className="text-xl text-white/70 font-light max-w-2xl mx-auto italic">
               "And remember — this is only from new sales. Add <span className="text-primary font-bold">lifetime renewal bonuses</span>, and your income keeps growing every month."
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -495,10 +541,10 @@ export default function BecomeDealer() {
       <section className="py-24 px-6 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Who Can Join?</h2>
-            <p className="text-slate-500 text-lg">Diverse opportunities for everyone with a growth mindset.</p>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 tracking-tight mb-6">Who Can Join?</h2>
+            <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">Diverse opportunities for everyone with a growth mindset.</p>
           </div>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {audience.map((item, idx) => (
               <motion.div
@@ -516,19 +562,11 @@ export default function BecomeDealer() {
               </motion.div>
             ))}
           </div>
-          
-          <div className="mt-20 p-12 rounded-[3.5rem] bg-primary/5 border border-primary/10 flex flex-col md:flex-row items-center gap-10 md:gap-20">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full" />
-              <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000&auto=format&fit=crop" 
-                alt="Support team" 
-                className="w-32 h-32 rounded-[2.5rem] object-cover relative z-10 shadow-2xl"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">No technical skills required</h3>
-              <p className="text-slate-500 text-lg font-light leading-relaxed max-w-xl">
+
+          <div className="mt-20 p-12 sm:p-16 rounded-[3.5rem] bg-primary/5 border border-primary/10 text-center">
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-xl md:text-2xl font-medium text-slate-900 mb-4">No technical skills required</h3>
+              <p className="text-slate-500 text-lg font-medium leading-relaxed">
                 We handle all the complexity. You focus on growth, we provide full support and the tools you need to succeed.
               </p>
             </div>
@@ -560,16 +598,16 @@ export default function BecomeDealer() {
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   Limited Time Opportunity
                 </div>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+                <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 text-white mb-6 tracking-tight leading-tight">
                   Start Your <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-indigo-300 to-fuchsia-300 italic pr-2">Journey Today</span>
                 </h2>
-                <p className="text-xl text-white/70 font-light leading-relaxed mb-10 max-w-xl">
+                <p className="text-xl text-white/70 font-medium leading-relaxed mb-10 max-w-xl">
                   Be among the <span className="text-white font-semibold border-b border-primary border-dashed">first 1000 dealers</span> and lock in your <span className="text-emerald-400 font-bold">40% lifetime commission</span>. Build your recurring income stream today!
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-6">
-                  <Link 
-                    href="https://wa.me/918300256356?text=Hello!%20I'm%20interested%20in%20your%20billing%20software." 
+                  <Link
+                    href="https://wa.me/918300256356?text=Hello!%20I'm%20interested%20in%20your%20billing%20software."
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 bg-emerald-500 text-slate-900 font-extrabold rounded-2xl text-lg hover:bg-emerald-400 transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_-15px_rgba(16,185,129,0.5)]"
                   >
                     <MessageCircle size={22} className="fill-slate-900" />
@@ -579,30 +617,30 @@ export default function BecomeDealer() {
               </div>
 
               <div className="lg:w-2/5 w-full relative">
-                 {/* Decorative floating info panel */}
-                 <div className="bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-white/20 transition-all">
-                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/30">
-                     <CheckCircle2 size={32} />
-                   </div>
-                   <h3 className="text-2xl font-bold text-white mb-2">Lifetime Access</h3>
-                   <p className="text-white/60 mb-8 text-sm leading-relaxed">Join the 1000 elite partners who enjoy unmatched profit sharing and constant support.</p>
-                   
-                   <div className="space-y-4">
-                     <div className="flex items-center justify-between text-sm">
-                       <span className="text-white/60">Dealership Fee</span>
-                       <div className="text-right">
-                         <span className="text-white/40 line-through text-xs mr-2">₹5,000</span>
-                         <span className="text-emerald-400 font-bold border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 rounded-md">₹0 (Free)</span>
-                       </div>
-                     </div>
-                     <div className="h-px w-full bg-white/10" />
-                     <div className="flex items-center justify-between text-sm">
-                       <span className="text-white/60">Commission Share</span>
-                       <span className="text-white font-bold text-lg">Flat 40%</span>
-                     </div>
-                   </div>
-                 </div>
+                {/* Decorative floating info panel */}
+                <div className="bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-white/20 transition-all">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-green-500 flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/30">
+                    <CheckCircle2 size={32} />
+                  </div>
+                  <h3 className="text-2xl font-medium text-white mb-2">Lifetime Access</h3>
+                  <p className="text-white/60 mb-8 text-sm leading-relaxed">Join the 1000 elite partners who enjoy unmatched profit sharing and constant support.</p>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-white/60">Dealership Fee</span>
+                      <div className="text-right">
+                        <span className="text-white/40 line-through text-xs mr-2">₹5,000</span>
+                        <span className="text-emerald-400 font-bold border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 rounded-md">₹0 (Free)</span>
+                      </div>
+                    </div>
+                    <div className="h-px w-full bg-white/10" />
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-white/60">Commission Share</span>
+                      <span className="text-white font-bold text-lg">Flat 40%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

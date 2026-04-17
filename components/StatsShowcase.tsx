@@ -76,7 +76,7 @@ export default function StatsShowcase() {
                 </div>
                 
                 <div className="mt-auto relative z-10 flex flex-col items-center">
-                  <div className="text-4xl lg:text-5xl font-extrabold text-slate-800 mb-3 tracking-tight">
+                  <div className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900  mb-3 tracking-tight">
                     {stat.value}
                   </div>
                   <div className="flex items-center justify-center space-x-2">

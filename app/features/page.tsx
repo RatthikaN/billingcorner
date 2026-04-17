@@ -88,9 +88,10 @@ export default function Features() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white mb-8 tracking-tighter leading-[0.95]"
               >
-                GST Ready <br />
+                 Smart GST 
+                <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 italic">
-                  Billing Engine
+                 Billing Engine
                 </span>
               </motion.h1>
 
@@ -110,7 +111,7 @@ export default function Features() {
                 className="flex flex-wrap gap-6"
               >
                 <Link href="/download" className="px-10 py-5 bg-primary text-white font-bold rounded-2xl flex items-center gap-3 group shadow-2xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
-                  Start Free Trial
+                 Start with just ₹1
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link href="/download" className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md">

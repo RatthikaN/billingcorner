@@ -24,7 +24,7 @@ export default function PrivacyPage() {
 
         <section className="mt-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b pb-2">4. Security</h2>
-          <p>Billing Corner employs industry-standard security measures, including encryption and secure servers, to protect your data from unauthorized access or disclosure.</p>
+          <p>Billing Corner, a brand of Codingrim Technology Solutions Private Limited, employs industry-standard security measures, including encryption and secure servers, to protect your data from unauthorized access or disclosure.</p>
         </section>
 
         <section className="mt-8">

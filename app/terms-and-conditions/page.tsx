@@ -14,7 +14,7 @@ export default function TermsPage() {
 
         <section className="mt-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b pb-2">2. Description of Service</h2>
-          <p>Billing Corner provides an AI-powered GST billing and inventory management software solution for businesses in India. Services include invoice generation, tax calculation, stock tracking, and financial reporting.</p>
+          <p>Billing Corner, a brand of Codingrim Technology Solutions Private Limited, provides an AI-powered GST billing and inventory management software solution for businesses in India. Services include invoice generation, tax calculation, stock tracking, and financial reporting.</p>
         </section>
 
         <section className="mt-8">
@@ -29,7 +29,7 @@ export default function TermsPage() {
 
         <section className="mt-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b pb-2">5. Intellectual Property</h2>
-          <p>All content, software, and technology on the Billing Corner platform are the property of Billing Corner India and are protected by copyright and intellectual property laws.</p>
+          <p>All content, software, and technology on the Billing Corner platform are the property of Codingrim Technology Solutions Private Limited and are protected by applicable copyright and intellectual property laws.</p>
         </section>
 
         <section className="mt-8">

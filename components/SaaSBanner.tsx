@@ -61,7 +61,7 @@ Simplify GST billing, manage inventory, and track your business performance in r
                   href="/download"
                   className="group inline-flex items-center gap-2 bg-white text-indigo-700 font-bold px-7 py-3.5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 text-sm"
                 >
-                  Get Started Free
+                Start with just ₹1
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link

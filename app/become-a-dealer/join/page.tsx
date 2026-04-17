@@ -86,16 +86,16 @@ export default function DealerJoin() {
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 px-6 overflow-x-hidden">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
         
         {/* Left Side: Value Props */}
-        <div className="w-full lg:w-[45%]">
+        <div className="w-full lg:w-[35%] py-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
             <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Official Partner Program</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight">
+            <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8 tracking-tighter leading-tight">
               Join the <br />
               <span className="text-primary italic">Billing Corner</span> <br />
               Dealer Network
@@ -124,7 +124,7 @@ export default function DealerJoin() {
         </div>
 
         {/* Right Side: Registration Form */}
-        <div className="w-full lg:w-[55%] relative">
+        <div className="w-full lg:w-[65%] relative">
           <div className="absolute inset-0 bg-primary/5 rounded-[3rem] blur-3xl -z-10" />
           
           <motion.form
@@ -132,38 +132,38 @@ export default function DealerJoin() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
             onSubmit={handleSubmit}
-            className="bg-white/80 backdrop-blur-xl p-8 md:p-12 rounded-[3.5rem] border border-slate-200 shadow-2xl relative"
+            className="bg-white/80 backdrop-blur-xl p-10 md:p-16 lg:p-20 rounded-[3.5rem] border border-slate-200 shadow-2xl relative"
           >
-            <div className="text-center mb-10">
-              <h2 className="text-2xl font-bold mb-2">Registration Form</h2>
-              <p className="text-slate-500 text-sm">Fill in your details to start the onboarding process.</p>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-medium text-slate-900 mb-3">Registration Form</h2>
+              <p className="text-slate-500 text-base">Fill in your details to start the onboarding process.</p>
             </div>
 
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <label className="block text-xs font-bold uppercase text-slate-400 mb-2 ml-1">Full Name</label>
+                  <label className="block text-sm font-bold uppercase text-slate-400 mb-3 ml-1">Full Name</label>
                   <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                    <User className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                     <input 
                       required
                       type="text" 
                       placeholder="John Doe"
-                      className="w-full bg-slate-100 border-none rounded-2xl py-4 pl-12 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                      className="w-full bg-slate-100 border-none rounded-2xl py-5 pl-14 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all text-lg"
                       value={formData.name}
                       onChange={e => setFormData({...formData, name: e.target.value})}
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase text-slate-400 mb-2 ml-1">Email Address</label>
+                  <label className="block text-sm font-bold uppercase text-slate-400 mb-3 ml-1">Email Address</label>
                   <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                    <Mail className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                     <input 
                       required
                       type="email" 
                       placeholder="john@example.com"
-                      className="w-full bg-slate-100 border-none rounded-2xl py-4 pl-12 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                      className="w-full bg-slate-100 border-none rounded-2xl py-5 pl-14 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all text-lg"
                       value={formData.email}
                       onChange={e => setFormData({...formData, email: e.target.value})}
                     />
@@ -172,14 +172,14 @@ export default function DealerJoin() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase text-slate-400 mb-2 ml-1">Phone Number</label>
+                <label className="block text-sm font-bold uppercase text-slate-400 mb-3 ml-1">Phone Number</label>
                 <div className="relative">
-                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                  <Phone className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                   <input 
                     required
                     type="tel" 
                     placeholder="+91 XXXXX XXXXX"
-                    className="w-full bg-slate-100 border-none rounded-2xl py-4 pl-12 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    className="w-full bg-slate-100 border-none rounded-2xl py-5 pl-14 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all text-lg"
                     value={formData.phone}
                     onChange={e => setFormData({...formData, phone: e.target.value})}
                   />
@@ -187,14 +187,14 @@ export default function DealerJoin() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase text-slate-400 mb-2 ml-1">Location / City</label>
+                <label className="block text-sm font-bold uppercase text-slate-400 mb-3 ml-1">Location / City</label>
                 <div className="relative">
-                  <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                  <MapPin className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                   <input 
                     required
                     type="text" 
                     placeholder="Mumbai, Maharashtra"
-                    className="w-full bg-slate-100 border-none rounded-2xl py-4 pl-12 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    className="w-full bg-slate-100 border-none rounded-2xl py-5 pl-14 pr-6 text-slate-900 focus:ring-2 focus:ring-primary/20 outline-none transition-all text-lg"
                     value={formData.location}
                     onChange={e => setFormData({...formData, location: e.target.value})}
                   />
@@ -203,14 +203,14 @@ export default function DealerJoin() {
 
               <button 
                 type="submit"
-                className="w-full py-5 bg-primary text-white font-bold rounded-2xl text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 mt-8"
+                className="w-full py-6 bg-primary text-white font-bold rounded-2xl text-xl shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 mt-10"
               >
                 Submit Application
-                <Send size={20} />
+                <Send size={24} />
               </button>
 
-              <div className="flex items-center justify-center gap-2 text-slate-400 text-xs mt-6">
-                <ShieldCheck size={14} />
+              <div className="flex items-center justify-center gap-2 text-slate-400 text-sm mt-8">
+                <ShieldCheck size={18} />
                 <span>Your data is protected and encrypted.</span>
               </div>
             </div>

@@ -32,7 +32,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                         <span className="px-4 py-2 bg-primary/5 rounded-full text-xs font-bold text-primary">
                             {post.category}
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
+                        <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900  leading-tight">
                             {post.title}
                         </h1>
 
@@ -127,7 +127,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                                     href="/download"
                                     className="inline-block w-full text-center bg-white text-primary font-bold py-4 rounded-xl hover:bg-slate-50 transition-colors relative z-10"
                                 >
-                                    Get Started Free
+                                    Start with just ₹1
                                 </Link>
                             </div>
                         </div>

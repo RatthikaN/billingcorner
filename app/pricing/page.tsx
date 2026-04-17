@@ -91,7 +91,7 @@ export default function Pricing() {
     <div className="pb-24">
       <section className="pt-32 pb-24 px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 mb-8 tracking-tight text-center">
+          <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8 tracking-tight text-center">
             Choose Your <span className="text-primary italic">Plan</span>
           </h1>
           <p className="text-slate-600 text-base md:text-xl font-medium">
@@ -117,7 +117,7 @@ export default function Pricing() {
                 </span>
               )}
               <div className="mb-8">
-                <h3 className={`text-2xl md:text-3xl font-black mb-2 tracking-tight ${plan.metal === 'gold' ? 'text-amber-900' : 'text-slate-900'}`}>{plan.name}</h3>
+                <h3 className={`text-2xl md:text-3xl font-normal mb-2 tracking-tight ${plan.metal === 'gold' ? 'text-amber-900' : 'text-slate-900'}`}>{plan.name}</h3>
                 <p className={`${plan.metal === 'gold' ? 'text-amber-700/70' : 'text-slate-500'} text-sm font-bold italic`}>{plan.desc}</p>
               </div>
               <div className="flex flex-col mb-8 gap-1">
@@ -126,12 +126,12 @@ export default function Pricing() {
                   <span className={`text-[10px] font-black px-2 py-0.5 rounded-md ${plan.metal === 'gold' ? 'bg-amber-200 text-amber-800' : 'bg-slate-200 text-slate-800'}`}>Save {plan.discountPercent}%</span>
                 </div>
                 <div className="flex items-baseline gap-2">
-                  <span className={`text-5xl font-black tracking-tighter ${plan.metal === 'gold' ? 'text-amber-950' : 'text-slate-900'}`}>₹{plan.price}</span>
+                  <span className={`text-5xl font-medium tracking-tighter ${plan.metal === 'gold' ? 'text-amber-950' : 'text-slate-900'}`}>₹{plan.price}</span>
                   <span className={`${plan.metal === 'gold' ? 'text-amber-800/60' : 'text-slate-500'} font-bold`}>/ {plan.period.replace('for ', '').replace('per ', '')}</span>
                 </div>
                 <p className={`${plan.metal === 'gold' ? 'text-amber-800/60' : 'text-slate-500'} font-bold text-sm`}>{plan.gst}</p>
               </div>
-              <Link href={plan.href} className={`w-full py-4 rounded-2xl font-black mb-10 transition-all block text-center shadow-lg ${plan.theme.button}`}>
+              <Link href={plan.href} className={`w-full py-4 rounded-2xl font-medium mb-10 transition-all block text-center shadow-lg ${plan.theme.button}`}>
                 {plan.cta}
               </Link>
               <ul className="space-y-4">

@@ -48,23 +48,23 @@ export default function IndustrySolutionLayout({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 leading-tight">
+              <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-4 leading-tight">
                 {title}
               </h1>
-              <h2 className="text-xl md:text-2xl font-semibold text-primary mb-6">
+              <h2 className="text-xl md:text-2xl font-medium text-primary mb-6">
                 {subtitle}
               </h2>
-              <div className="text-slate-600 text-lg mb-8 leading-relaxed">
+              <div className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-8">
                 {description}
               </div>
               <div className="flex flex-wrap gap-4">
                 <Link href="/download" className="px-8 py-4 bg-primary text-white font-bold rounded-2xl flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-105 transition-all">
-                  Get Started for Free
+                  Start with just ₹1
                   <ArrowRight size={18} />
                 </Link>
-                <Link href="/contact" className="px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all">
+                {/* <Link href="/contact" className="px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all">
                   Book a Demo
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           </div>
@@ -89,7 +89,7 @@ export default function IndustrySolutionLayout({
       </section>
 
       {/* What We Offer */}
-      <section
+      {/* <section
         className="py-24 px-6 relative"
         style={whatWeOfferBgImage ? {
           backgroundImage: `url(${whatWeOfferBgImage})`,
@@ -98,7 +98,6 @@ export default function IndustrySolutionLayout({
           backgroundPosition: 'center',
         } : { backgroundColor: '#f8fafc' }}
       >
-        {/* Overlay for readability */}
         {whatWeOfferBgImage && (
           <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]" />
         )}
@@ -133,13 +132,13 @@ export default function IndustrySolutionLayout({
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2">
-             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Why Choose Us?</h2>
+             <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8">Why Choose Us?</h2>
              <div className="space-y-6">
                 {whyChooseUs.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4">
@@ -152,7 +151,7 @@ export default function IndustrySolutionLayout({
              </div>
           </div>
           <div className="w-full md:w-1/2 bg-primary rounded-3xl p-12 text-white">
-             <h3 className="text-3xl font-bold mb-6">{closingTitle}</h3>
+             <h3 className="text-3xl font-medium mb-6">{closingTitle}</h3>
              <p className="text-white/80 text-lg mb-8 leading-relaxed">
                 {closingDescription}
              </p>

@@ -42,16 +42,25 @@ export default function FeatureClient({ feature }: FeatureClientProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em] mb-8">
-              <Zap size={14} className="text-primary animate-pulse" />
+{/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8 w-fit mt-10"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
               Feature Highlights
-            </div>
+            </motion.div>              
             
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight italic">
+            <h1 className="text-3xl md:text-4xl xl:text-5xl font-medium text-slate-900 mb-8 tracking-tighter leading-tight italic">
               {feature.title}
             </h1>
             
-            <p className="text-slate-600 text-xl mb-12 font-light leading-relaxed">
+            <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-12">
               {feature.desc}
             </p>
 
@@ -116,8 +125,8 @@ export default function FeatureClient({ feature }: FeatureClientProps) {
               <div className={`w-14 h-14 ${item.bg} ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                 <item.icon size={28} />
               </div>
-              <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-              <p className="text-slate-500 leading-relaxed font-light">{item.desc}</p>
+              <h3 className="text-xl md:text-2xl font-medium text-slate-900 mb-4">{item.title}</h3>
+              <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -130,7 +139,7 @@ export default function FeatureClient({ feature }: FeatureClientProps) {
           className="bg-slate-900 rounded-[4rem] p-12 md:p-20 text-center relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tighter">Ready to experience <br /> {feature.title}?</h2>
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-medium text-white mb-8 tracking-tighter">Ready to experience <br /> {feature.title}?</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link href="/download" className="px-10 py-5 bg-primary text-white font-bold rounded-2xl text-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
               Get Started Now

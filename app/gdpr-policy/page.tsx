@@ -9,12 +9,12 @@ export default function GdprPage() {
         
         <section className="mt-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b pb-2">1. Introduction</h2>
-          <p>Billing Corner is committed to ensuring the privacy and safety of our users' data. This policy outlines our commitment to the General Data Protection Regulation (GDPR) for our users located in the European Economic Area (EEA).</p>
+          <p>Billing Corner, a brand of Codingrim Technology Solutions Private Limited, is committed to ensuring the privacy and safety of our users' data. This policy outlines our commitment to the General Data Protection Regulation (GDPR) for our users located in the European Economic Area (EEA).</p>
         </section>
 
         <section className="mt-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b pb-2">2. Data Controller</h2>
-          <p>Billing Corner India acts as the data controller for the personal information collected through our platform. We determine the purpose and means of processing your data.</p>
+          <p>Billing Corner India, operated under Codingrim Technology Solutions Private Limited, acts as the data controller for the personal information collected through our platform. We determine the purpose and means of processing your data.</p>
         </section>
 
         <section className="mt-8">
